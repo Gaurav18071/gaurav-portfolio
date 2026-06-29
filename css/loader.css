@@ -1,0 +1,128 @@
+/* ==========================================
+   LOADER
+========================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    transition:opacity .7s ease,
+               visibility .7s ease;
+
+}
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+/* Logo */
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-logo{
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    font-family:var(--font-heading);
+
+    letter-spacing:6px;
+
+    color:#fff;
+
+    margin-bottom:35px;
+
+}
+
+.loader-logo span{
+
+    color:var(--clr-primary);
+
+}
+
+/* Loading Bar */
+
+.loader-bar{
+
+    width:240px;
+
+    height:5px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.loader-bar span{
+
+    display:block;
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        var(--clr-primary),
+        #ff5c7c
+    );
+
+    animation:loading 1.8s ease forwards;
+
+}
+
+@keyframes loading{
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+#progress-bar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--clr-primary);
+
+    z-index:99999;
+
+}

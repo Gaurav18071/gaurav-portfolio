@@ -1,0 +1,416 @@
+/* ======================================================
+   GLOBAL STYLES
+   ====================================================== */
+
+body{
+    font-family: var(--font-body);
+    background: var(--clr-bg);
+    color: var(--clr-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ======================================================
+   ANIMATED BACKGROUND
+   ====================================================== */
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,45,85,.12), transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(255,45,85,.10), transparent 30%),
+        radial-gradient(circle at 50% 10%, rgba(255,45,85,.06), transparent 35%);
+
+    animation: backgroundMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundMove{
+
+    from{
+        transform: translateY(0px);
+    }
+
+    to{
+        transform: translateY(-40px);
+    }
+
+}
+
+/* ======================================================
+   GRID BACKGROUND
+   ====================================================== */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-3;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+    background-size:60px 60px;
+
+}
+
+/* ======================================================
+   CONTAINER
+   ====================================================== */
+
+.container{
+
+    width:min(var(--container-width),90%);
+
+    margin-inline:auto;
+
+}
+
+/* ======================================================
+   SECTION
+   ====================================================== */
+
+.section{
+
+    padding:var(--section-padding) 0;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.section-subtitle{
+
+    color:var(--clr-primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+.section-title{
+
+    font-size:3rem;
+
+    font-family:var(--font-heading);
+
+    margin:12px 0;
+
+}
+
+.section-description{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--clr-text-light);
+
+}
+
+/* ======================================================
+   BUTTONS
+   ====================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition-normal);
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn-primary{
+
+    background:var(--clr-primary);
+
+    color:white;
+
+    box-shadow:var(--shadow-red);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    background:var(--clr-primary-dark);
+
+    box-shadow:var(--shadow-red-lg);
+
+}
+
+.btn-outline{
+
+    border:1px solid var(--clr-border);
+
+    color:white;
+
+    backdrop-filter:blur(12px);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--clr-primary);
+
+    border-color:var(--clr-primary);
+
+}
+
+/* ======================================================
+   GLASS CARD
+   ====================================================== */
+
+.glass-card{
+
+    background:var(--glass-bg);
+
+    backdrop-filter:var(--glass-blur);
+
+    border:1px solid var(--glass-border);
+
+    border-radius:var(--radius-lg);
+
+    transition:var(--transition-normal);
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(255,45,85,.4);
+
+    box-shadow:var(--shadow-red);
+
+}
+
+/* ======================================================
+   BADGES
+   ====================================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    border:1px solid var(--clr-border);
+
+    background:rgba(255,255,255,.03);
+
+    transition:var(--transition-fast);
+
+}
+
+.badge:hover{
+
+    background:var(--clr-primary);
+
+    transform:translateY(-4px);
+
+}
+
+/* ======================================================
+   GRID SYSTEM
+   ====================================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+/* ======================================================
+   FLEX
+   ====================================================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ======================================================
+   IMAGE
+   ====================================================== */
+
+.img-cover{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* ======================================================
+   TEXT
+   ====================================================== */
+
+.highlight{
+
+    color:var(--clr-primary);
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+/* ======================================================
+   ANIMATION
+   ====================================================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s ease;
+
+}
+
+/* ======================================================
+   SCROLLBAR
+   ====================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#090909;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--clr-primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--clr-primary-dark);
+
+}
+
+/* ======================================================
+   SELECTION
+   ====================================================== */
+
+::selection{
+
+    background:var(--clr-primary);
+
+    color:white;
+
+}

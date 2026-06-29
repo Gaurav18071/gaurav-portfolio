@@ -1,0 +1,298 @@
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: var(--z-navbar);
+
+    transition: var(--transition-normal);
+
+}
+
+/* Added when page scrolls */
+
+.header.scrolled {
+
+    background: rgba(5, 5, 5, .75);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    box-shadow: 0 10px 40px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+   NAVBAR CONTAINER
+========================================== */
+
+.navbar {
+
+    height: var(--nav-height);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+
+    font-family: var(--font-heading);
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    color: var(--clr-white);
+
+    letter-spacing: 2px;
+
+    transition: var(--transition-normal);
+
+}
+
+.logo span {
+
+    color: var(--clr-primary);
+
+}
+
+.logo:hover {
+
+    letter-spacing: 4px;
+
+}
+
+/* ==========================================
+   NAV MENU
+========================================== */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2.5rem;
+
+}
+
+.nav-link {
+
+    position: relative;
+
+    color: var(--clr-text);
+
+    font-size: .95rem;
+
+    font-weight: 500;
+
+    transition: var(--transition-fast);
+
+}
+
+.nav-link:hover {
+
+    color: var(--clr-white);
+
+}
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--clr-primary);
+
+    transition: .35s ease;
+
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    width: 100%;
+
+}
+
+.nav-link.active {
+
+    color: var(--clr-white);
+
+}
+
+/* ==========================================
+   NAV BUTTON
+========================================== */
+
+.nav-btn {
+
+    padding: 13px 28px;
+
+    font-size: .95rem;
+
+}
+
+/* ==========================================
+   HAMBURGER
+========================================== */
+
+.hamburger {
+
+    display: none;
+
+    width: 30px;
+
+    height: 24px;
+
+    cursor: pointer;
+
+    position: relative;
+
+}
+
+.hamburger span {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 3px;
+
+    background: var(--clr-white);
+
+    border-radius: 10px;
+
+    transition: .35s ease;
+
+}
+
+.hamburger span:nth-child(1) {
+
+    top: 0;
+
+}
+
+.hamburger span:nth-child(2) {
+
+    top: 10px;
+
+}
+
+.hamburger span:nth-child(3) {
+
+    bottom: 0;
+
+}
+
+/* ==========================================
+   HAMBURGER ACTIVE
+========================================== */
+
+.hamburger.active span:nth-child(1) {
+
+    transform: rotate(45deg);
+
+    top: 10px;
+
+}
+
+.hamburger.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.hamburger.active span:nth-child(3) {
+
+    transform: rotate(-45deg);
+
+    bottom: 11px;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 992px) {
+
+    .hamburger {
+
+        display: block;
+
+        z-index: 1100;
+
+    }
+
+    .nav-btn {
+
+        display: none;
+
+    }
+
+    .nav-menu {
+
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 100%;
+        height: 100vh;
+
+        background: rgba(5,5,5,.96);
+
+        backdrop-filter: blur(20px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 2rem;
+
+        transition: .45s ease;
+
+    }
+
+    .nav-menu.active {
+
+        right: 0;
+
+    }
+
+    .nav-link {
+
+        font-size: 1.3rem;
+
+    }
+
+}

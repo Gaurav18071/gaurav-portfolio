@@ -1,0 +1,426 @@
+/* ==========================================
+   HIRE ME
+========================================== */
+
+.hire-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    padding:50px;
+
+    border-radius:24px;
+
+}
+
+.hire-content p{
+
+    margin:25px 0;
+
+    line-height:1.9;
+
+}
+
+.hire-features{
+
+    margin:40px 0;
+
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+.feature i{
+
+    color:var(--clr-primary);
+
+}
+
+.response-time{
+
+    margin-top:35px;
+
+    color:var(--clr-text-light);
+
+}
+
+.response-time i{
+
+    color:var(--clr-primary);
+
+    margin-right:10px;
+
+}
+
+/* FORM */
+
+.hire-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--clr-white);
+
+}
+/* ==========================================
+   SELECT OPTIONS
+========================================== */
+
+.input-group select{
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    background:#1b1719;
+
+    color:#ffffff;
+
+}
+
+.input-group select option{
+
+    background:#1b1719;
+
+    color:#ffffff;
+
+    padding:15px;
+
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+
+    border-color:var(--clr-primary);
+
+}
+
+.input-group textarea{
+
+    resize:none;
+
+}
+
+.hire-form button{
+
+    width:fit-content;
+
+}
+
+@media(max-width:992px){
+
+    .hire-wrapper{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hire-wrapper{
+
+        padding:25px;
+
+    }
+
+    .hire-form button{
+
+        width:100%;
+
+    }
+
+}
+/* =====================================================
+   SUCCESS POPUP
+===================================================== */
+
+.success-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:999999;
+
+}
+
+.success-modal.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.success-box{
+
+    width:min(460px,90%);
+
+    background:#111111;
+
+    border:1px solid rgba(255,45,85,.25);
+
+    border-radius:24px;
+
+    padding:40px 35px;
+
+    text-align:center;
+
+    transform:translateY(30px) scale(.95);
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.6),
+    0 0 40px rgba(255,45,85,.15);
+
+}
+
+.success-modal.show .success-box{
+
+    transform:translateY(0) scale(1);
+
+}
+
+.success-icon{
+
+    .success-icon{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(34,197,94,.5);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 20px rgba(34,197,94,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(34,197,94,0);
+
+    }
+
+}
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.15);
+
+    border:2px solid rgba(34,197,94,.25);
+
+}
+
+.success-icon i{
+
+    font-size:3rem;
+
+    color:#22c55e;
+
+}
+
+.success-box h2{
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+    color:#ffffff;
+
+}
+
+.success-box p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+    margin-bottom:30px;
+
+}
+
+.success-box strong{
+
+    color:#ffffff;
+
+}
+
+.success-box .btn{
+
+    width:100%;
+
+}
+
+
+/* ==========================================
+   BUTTON LOADING
+========================================== */
+
+#submitBtn{
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+#submitBtn:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.8;
+
+}
+
+
+/* ==========================================
+   INPUT FOCUS
+========================================== */
+
+.hire-form input:focus,
+.hire-form textarea:focus,
+.hire-form select:focus{
+
+    border-color:var(--clr-primary);
+
+    box-shadow:0 0 18px rgba(255,45,85,.2);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:576px){
+
+.success-box{
+
+    padding:30px 22px;
+
+}
+
+.success-box h2{
+
+    font-size:1.6rem;
+
+}
+
+.success-icon{
+
+    width:75px;
+
+    height:75px;
+
+}
+
+.success-icon i{
+
+    font-size:2.4rem;
+
+}
+
+}
+@keyframes popupBounce{
+
+    0%{
+
+        transform:scale(.7);
+
+        opacity:0;
+
+    }
+
+    70%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.success-modal.show .success-box{
+
+    animation:popupBounce .45s ease;
+
+}

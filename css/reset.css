@@ -1,0 +1,128 @@
+/* ======================================================
+   RESET CSS
+   ====================================================== */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Smooth Scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body */
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Images */
+
+img,
+picture,
+svg,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Forms */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Lists */
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* Table */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+}
+
+
+/* Paragraph */
+
+p {
+    overflow-wrap: break-word;
+}
+
+
+/* Textarea */
+
+textarea {
+    resize: none;
+}
+
+
+/* Input Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+    color: inherit;
+}
+
+
+/* Selection */
+
+::selection {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+}

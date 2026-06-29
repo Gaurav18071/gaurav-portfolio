@@ -1,0 +1,65 @@
+/* ==========================================
+   CUSTOM CURSOR
+========================================== */
+
+.cursor-dot{
+
+    position:fixed;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--clr-primary);
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:99999;
+
+}
+
+.cursor-ring{
+
+    position:fixed;
+
+    width:42px;
+
+    height:42px;
+
+    border:2px solid var(--clr-primary);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    transition:
+
+    width .2s,
+
+    height .2s,
+
+    border .2s,
+
+    transform .08s;
+
+    z-index:99998;
+
+}
+
+/* Hover */
+
+.cursor-hover{
+
+    width:70px !important;
+
+    height:70px !important;
+
+    background:rgba(255,45,85,.08);
+
+}
