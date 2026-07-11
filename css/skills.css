@@ -209,12 +209,42 @@
 
 .skill-pill:nth-child(5){
 
-    border-color:#38bdf8;
+    border-color:#4fdd1b;
 
-    color:#38bdf8;
+    color:#0ba77d;
 
 }
+.skill-pill:nth-child(6){
 
+    border-color:#d21bea;
+
+    color:#cc0b28;
+
+}
+.skill-pill:nth-child(7){
+
+    border-color:#d2931e;
+
+    color:#976262;
+}
+.skill-pill:nth-child(8){
+
+    border-color:#3f1d21;
+
+    color:#f20808;
+}
+.skill-pill:nth-child(9){
+
+    border-color:#195127;
+
+    color:#976262;
+}
+.skill-pill:nth-child(10){
+
+    border-color:#fd049a;
+
+    color:#661313;
+}
 .skill-pill:hover{
 
     color:#fff;
