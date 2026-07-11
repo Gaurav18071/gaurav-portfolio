@@ -75,9 +75,8 @@ window.addEventListener("scroll", () => {
     sections.forEach(section => {
 
         const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
 
-        if (pageYOffset >= sectionTop) {
+        if (window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
 
@@ -231,9 +230,9 @@ const revealObserver = new IntersectionObserver(
         entries.forEach((entry) => {
 
             if (entry.isIntersecting) {
-                entry.classList.add("active");
+                entry.target.classList.add("active");
             } else {
-                entry.classList.remove("active");
+                entry.target.classList.remove("active");
             }
 
         });

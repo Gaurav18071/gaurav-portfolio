@@ -197,6 +197,30 @@ body::after{
 
 }
 
+.btn-secondary{
+
+    background:transparent;
+
+    border:2px solid var(--clr-primary);
+
+    color:var(--clr-primary);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--clr-primary);
+
+    color:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow-red);
+
+}
+
 /* ======================================================
    GLASS CARD
    ====================================================== */
