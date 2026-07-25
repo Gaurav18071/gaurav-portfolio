@@ -21,10 +21,11 @@
     border-radius: 50%;
 
     background: radial-gradient(circle,
-    rgba(255,45,85,.12),
-    transparent 70%);
+    rgba(255,45,85,.14) 0%,
+    rgba(255,45,85,.06) 45%,
+    transparent 72%);
 
-    filter: blur(40px);
+    pointer-events: none;
 
     z-index: -1;
 }

@@ -39,6 +39,7 @@ if (contactForm) {
                 contactForm.reset();
 
                 successModal.classList.add("show");
+                closeModal?.focus();
 
                 submitBtn.innerHTML = `
                     <i class="fas fa-check"></i>
@@ -67,9 +68,7 @@ if (contactForm) {
 
         }
 
-        catch(error){
-
-            console.error(error);
+        catch {
 
             submitBtn.disabled = false;
 

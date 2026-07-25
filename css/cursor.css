@@ -6,6 +6,10 @@
 
     position:fixed;
 
+    top:0;
+
+    left:0;
+
     width:8px;
 
     height:8px;
@@ -16,15 +20,19 @@
 
     pointer-events:none;
 
-    transform:translate(-50%,-50%);
-
     z-index:99999;
+
+    will-change:transform;
 
 }
 
 .cursor-ring{
 
     position:fixed;
+
+    top:0;
+
+    left:0;
 
     width:42px;
 
@@ -36,7 +44,9 @@
 
     pointer-events:none;
 
-    transform:translate(-50%,-50%);
+    z-index:99998;
+
+    will-change:transform,width,height;
 
     transition:
 
@@ -44,11 +54,7 @@
 
     height .2s,
 
-    border .2s,
-
-    transform .08s;
-
-    z-index:99998;
+    border .2s;
 
 }
 

@@ -69,6 +69,14 @@
 
     <link rel="canonical" href="https://gaurav-portfolio-ea7.pages.dev">
 
+    <meta name="robots" content="index, follow">
+
+    <!-- ==========================================
+                    PRELOAD — HERO ONLY
+    =========================================== -->
+
+    <link rel="preload" as="image" href="assets/gaurav.webp" type="image/webp" fetchpriority="high">
+
     <!-- ==========================================
                     GOOGLE FONTS
     =========================================== -->
@@ -77,23 +85,36 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap">
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
 
     <!-- ==========================================
-                    FONT AWESOME
+                    FONT AWESOME — non-blocking
     =========================================== -->
 
-    <link rel="stylesheet"
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link rel="preload" as="style"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- ==========================================
-                    DEV ICONS
-    =========================================== -->
-
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </noscript>
 
     <!-- ==========================================
                     CSS FILES
@@ -126,13 +147,42 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/cursor.css">
+
+    <!-- ==========================================
+                    STRUCTURED DATA
+    =========================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gaurav Mishra",
+        "url": "https://gaurav-portfolio-ea7.pages.dev",
+        "image": "https://gaurav-portfolio-ea7.pages.dev/assets/preview.png",
+        "jobTitle": "Frontend Developer",
+        "description": "Computer Science Engineer and Frontend Developer specializing in responsive and modern web applications.",
+        "email": "gauravmishra.dev.27@gmail.com",
+        "telephone": "+91-9717067268",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Delhi",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://github.com/Gaurav18071",
+            "https://in.linkedin.com/in/gaurav18071"
+        ]
+    }
+    </script>
 </head>
 
 
 <body>
-    <div class="cursor-dot"></div>
+    <a href="#home" class="skip-link">Skip to main content</a>
 
-<div class="cursor-ring"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <div class="cursor-ring" aria-hidden="true"></div>
 
 
     <!-- ==========================================
@@ -161,12 +211,7 @@
 
 <!-- Scroll Progress -->
 
-<div id="progress-bar"></div>
-
-    <!-- ================= CURSOR ================= -->
-
-    <div class="cursor"></div>
-    <div class="cursor-blur"></div>
+<div id="progress-bar" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 
     <!-- ================= HEADER ================= -->
 
@@ -178,7 +223,7 @@
             G<span>A</span>UR<span>A</span>V
         </a>
 
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu" role="menubar">
 
             <li><a href="#home" class="nav-link">Home</a></li>
 
@@ -194,13 +239,13 @@
 
         </ul>
 
-        <div class="hamburger">
+        <button type="button" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
 
-            <span></span>
-            <span></span>
-            <span></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
 
-        </div>
+        </button>
 
     </nav>
 
@@ -257,18 +302,19 @@
 
     <a href="assets/Gaurav_Mishra_Resume _Intern.pdf"
        target="_blank"
+       rel="noopener noreferrer"
        class="btn btn-secondary">
 
-        <i class="fas fa-eye"></i>
+        <i class="fas fa-eye" aria-hidden="true"></i>
         View Resume
 
     </a>
 
     <a href="assets/Gaurav_Mishra_Resume _Intern.pdf"
-       download
+       download="Gaurav_Mishra_Resume.pdf"
        class="btn btn-outline">
 
-        <i class="fas fa-download"></i>
+        <i class="fas fa-download" aria-hidden="true"></i>
         Download Resume
 
     </a>
@@ -279,21 +325,21 @@
 
             <div class="hero-social fade-up active">
 
-                <a href="https://github.com/Gaurav18071" target="_blank">
+                <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" aria-label="Visit Gaurav on GitHub">
 
-                    <i class="fab fa-github"></i>
+                    <i class="fab fa-github" aria-hidden="true"></i>
 
                 </a>
 
-                <a href="https://in.linkedin.com/in/gaurav18071" target="_blank">
+                <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer" aria-label="Connect with Gaurav on LinkedIn">
 
-                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
 
                 </a>
 
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmishra.dev.27@gmail.com"
-   target="_blank">
-    <i class="fas fa-envelope"></i>
+   target="_blank" rel="noopener noreferrer" aria-label="Send email to Gaurav">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
 </a>
             </div>
 
@@ -307,9 +353,16 @@
 
                 <div class="image-glow"></div>
 
-                <img
-                    src="assets/gaurav.png"
-                    alt="Gaurav">
+                <picture>
+                    <source srcset="assets/gaurav.webp" type="image/webp">
+                    <img
+                        src="assets/gaurav.png"
+                        alt="Portrait of Gaurav Mishra, Frontend Developer"
+                        width="430"
+                        height="645"
+                        fetchpriority="high"
+                        decoding="async">
+                </picture>
 
             </div>
 
@@ -319,9 +372,9 @@
 
     <!-- Scroll Indicator -->
 
-    <a href="#about" class="scroll-indicator">
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
 
-        <span></span>
+        <span aria-hidden="true"></span>
 
     </a>
 
@@ -363,8 +416,15 @@
 
                 <div class="about-image-wrapper">
 
-                    <img src="assets/gaurav2.png"
-                         alt="Gaurav">
+                    <picture>
+                        <source srcset="assets/gaurav2.webp" type="image/webp">
+                        <img src="assets/gaurav2.png"
+                             alt="Gaurav Mishra working on web development projects"
+                             width="360"
+                             height="479"
+                             loading="lazy"
+                             decoding="async">
+                    </picture>
 
                 </div>
 
@@ -716,8 +776,15 @@
 
             <div class="featured-image">
 
-                <img src="assets/estrip.png"
-                    alt="Estrip Project">
+                <picture>
+                    <source srcset="assets/estrip.webp" type="image/webp">
+                    <img src="assets/estrip.png"
+                        alt="Estrip AI travel platform dashboard preview"
+                        width="1200"
+                        height="550"
+                        loading="lazy"
+                        decoding="async">
+                </picture>
 
             </div>
 
@@ -727,7 +794,7 @@
                     ⭐ Featured Project
                 </span>
 
-                <h2>Estrip - AI Travel Platform</h2>
+                <h3>Estrip - AI Travel Platform</h3>
 
                 <p>
 
@@ -750,8 +817,7 @@
 
                 <div class="project-buttons">
 
-                  
-                    <a href="https://github.com/Gaurav18071" target="_blank" class="btn btn-outline">
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                         GitHub
                     </a>
 
@@ -767,10 +833,19 @@
 
             <!-- Golf -->
 
-            <div class="project-card glass-card">
+            <article class="project-card glass-card">
 
-                <img src="assets/golf-course.png"
-                    alt="Golf Website">
+                <div class="project-card__media">
+                    <picture>
+                        <source srcset="assets/golf-course.webp" type="image/webp">
+                        <img src="assets/golf-course.png"
+                            alt="Golf Club Website landing page screenshot"
+                            width="600"
+                            height="900"
+                            loading="lazy"
+                            decoding="async">
+                    </picture>
+                </div>
 
                 <h3>Golf Club Website</h3>
 
@@ -779,36 +854,55 @@
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071" target="_blank" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
                 </div>
 
-            </div>
+            </article>
 
-            <!-- Task Manager -->
+            <!-- Neuro Quiz -->
 
-            <div class="project-card glass-card">
+            <article class="project-card glass-card">
 
-                <img src="assets/taskmanger.png"
-                    alt="Task Manager">
+                <div class="project-card__media">
+                    <picture>
+                        <source srcset="assets/quiz.webp" type="image/webp">
+                        <img src="assets/quiz.png"
+                            alt="Neuro Quiz interactive quiz platform screenshot"
+                            width="600"
+                            height="273"
+                            loading="lazy"
+                            decoding="async">
+                    </picture>
+                </div>
 
-                <h3>Task Manager</h3>
+                <h3>Neuro Quiz</h3>
 
                 <p>
-                    Task management application with CRUD functionality.
+                    Interactive Quiz Platform Built with Vanilla JavaScript &amp; Vite
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071" target="_blank" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/Gaurav18071/NeuroQuiz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
+                    <a href="https://neuroquiz-g.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Live</a>
                 </div>
 
-            </div>
+            </article>
 
             <!-- Todo -->
 
-            <div class="project-card glass-card">
+            <article class="project-card glass-card">
 
-                <img src="assets/todo.png"
-                    alt="Todo App">
+                <div class="project-card__media">
+                    <picture>
+                        <source srcset="assets/todo.webp" type="image/webp">
+                        <img src="assets/todo.png"
+                            alt="Smart To-Do List application screenshot"
+                            width="600"
+                            height="265"
+                            loading="lazy"
+                            decoding="async">
+                    </picture>
+                </div>
 
                 <h3>Smart To-Do List</h3>
 
@@ -817,17 +911,26 @@
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071" target="_blank" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
                 </div>
 
-            </div>
+            </article>
 
             <!-- Portfolio -->
 
-            <div class="project-card glass-card">
+            <article class="project-card glass-card">
 
-                <img src="assets/portfolio.png"
-                    alt="Portfolio">
+                <div class="project-card__media">
+                    <picture>
+                        <source srcset="assets/portfolio.webp" type="image/webp">
+                        <img src="assets/portfolio.png"
+                            alt="Developer portfolio website screenshot"
+                            width="1200"
+                            height="551"
+                            loading="lazy"
+                            decoding="async">
+                    </picture>
+                </div>
 
                 <h3>Developer Portfolio</h3>
 
@@ -836,10 +939,10 @@
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071" target="_blank" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
                 </div>
 
-            </div>
+            </article>
 
         </div>
 
@@ -1014,7 +1117,7 @@
             </div>
 
             <!-- Right Side -->
-<form class="hire-form" id="contactForm">
+<form class="hire-form" id="contactForm" aria-label="Contact form">
 
     <!-- Web3Forms -->
 
@@ -1038,16 +1141,22 @@
     <input
         type="checkbox"
         name="botcheck"
-        style="display:none;">
+        class="visually-hidden"
+        tabindex="-1"
+        aria-hidden="true">
 
     <!-- Name -->
 
     <div class="input-group">
 
+        <label class="visually-hidden" for="contact-name">Your Name</label>
+
         <input
             type="text"
+            id="contact-name"
             name="name"
             placeholder="Your Name"
+            autocomplete="name"
             required>
 
     </div>
@@ -1056,10 +1165,14 @@
 
     <div class="input-group">
 
+        <label class="visually-hidden" for="contact-email">Email Address</label>
+
         <input
             type="email"
+            id="contact-email"
             name="email"
             placeholder="Email Address"
+            autocomplete="email"
             required>
 
     </div>
@@ -1068,7 +1181,10 @@
 
     <div class="input-group">
 
+        <label class="visually-hidden" for="contact-project">Project Type</label>
+
         <select
+            id="contact-project"
             name="project"
             required>
 
@@ -1100,7 +1216,10 @@
 
     <div class="input-group">
 
+        <label class="visually-hidden" for="contact-message">Project details</label>
+
         <textarea
+            id="contact-message"
             rows="6"
             name="message"
             placeholder="Tell me about your project..."
@@ -1129,17 +1248,17 @@
         SUCCESS POPUP
 ========================================== -->
 
-<div id="successModal" class="success-modal">
+<div id="successModal" class="success-modal" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
 
     <div class="success-box">
 
-        <div class="success-icon">
+        <div class="success-icon" aria-hidden="true">
 
             <i class="fas fa-circle-check"></i>
 
         </div>
 
-        <h2>
+        <h2 id="successModalTitle">
 
             Message Sent Successfully!
 
@@ -1223,7 +1342,7 @@
                 <p>gauravmishra.dev.27@gmail.com</p>
 
                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmishra.dev.27@gmail.com"
-   target="_blank">
+   target="_blank" rel="noopener noreferrer">
     Send Mail
 </a>
 
@@ -1281,7 +1400,7 @@
 
                 <p>Connect Professionally</p>
 
-                <a href="https://in.linkedin.com/in/gaurav18071" target="_blank">
+                <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer">
                     Visit Profile
                 </a>
 
@@ -1354,21 +1473,21 @@
 
                 <div class="social-icons">
 
-                    <a href="https://github.com/Gaurav18071" target="_blank">
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
 
-                        <i class="fab fa-github"></i>
-
-                    </a>
-
-                    <a href="https://in.linkedin.com/in/gaurav18071" target="_blank">
-
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-github" aria-hidden="true"></i>
 
                     </a>
 
-                    <a href="mailto:gauravmishra.dev.27@gmail.com">
+                    <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
 
-                        <i class="fas fa-envelope"></i>
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+
+                    </a>
+
+                    <a href="mailto:gauravmishra.dev.27@gmail.com" aria-label="Email Gaurav">
+
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
 
                     </a>
 
@@ -1387,9 +1506,9 @@
 
             </p>
 
-            <a href="#home" class="back-to-top">
+            <a href="#home" class="back-to-top" aria-label="Back to top">
 
-                <i class="fas fa-arrow-up"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
 
             </a>
 
@@ -1403,8 +1522,8 @@
                     JAVASCRIPT
     =========================================== -->
 
-<script src="js/app.js"></script>
-<script src="js/email.js"></script>
+<script src="js/app.js" defer></script>
+<script src="js/email.js" defer></script>
     
 
 </body>
