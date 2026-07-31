@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ringY += (cursorY - ringY) * 0.18;
                     ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
 
-                    if (Math.abs(cursorX - ringX) > 0.5 || Math.abs(cursorY - ringY) > 0.5) {
+                    if (Math.abs(cursorX - ringX) > 0.8 || Math.abs(cursorY - ringY) > 0.5) {
                         requestAnimationFrame(animateRing);
                     } else {
                         cursorTicking = false;
