@@ -25,7 +25,7 @@
 
     <meta name="author" content="Gaurav Mishra">
 
-    <meta name="theme-color" content="#ff2d55">
+    <meta name="theme-color" content="#d80032">
 
     <!-- ==========================================
                     OPEN GRAPH
@@ -120,11 +120,10 @@
     </noscript>
 
     <!-- ==========================================
-                    CSS FILES (Minified & Preloaded)
+                    CSS FILES
     =========================================== -->
 
-    <link rel="preload" href="css/bundle.min.css" as="style">
-    <link rel="stylesheet" href="css/bundle.min.css">
+    <link rel="stylesheet" href="css/bundle.css">
 
     <!-- ==========================================
                     STRUCTURED DATA
@@ -186,6 +185,12 @@
     </div>
 
 </div>
+<script>
+    setTimeout(function() {
+        var l = document.getElementById("loader");
+        if (l) l.classList.add("hide");
+    }, 1000);
+</script>
 
 <!-- Scroll Progress -->
 
@@ -334,7 +339,7 @@
                 <picture>
                     <source srcset="assets/gaurav.webp" type="image/webp">
                     <img
-                        src="assets/gaurav.png"
+                        src="assets/gaurav.jpg"
                         alt="Portrait of Gaurav Mishra, Frontend Developer"
                         width="430"
                         height="645"
@@ -396,7 +401,7 @@
 
                     <picture>
                         <source srcset="assets/gaurav2.webp" type="image/webp">
-                        <img src="assets/gaurav2.png"
+                        <img src="assets/gaurav2.jpg"
                              alt="Gaurav Mishra working on web development projects"
                              width="360"
                              height="479"

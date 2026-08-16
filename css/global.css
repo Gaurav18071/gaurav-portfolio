@@ -187,11 +187,13 @@ body::after{
 
 .btn-primary{
 
-    background:var(--clr-primary);
+    background: #d80032;
 
-    color:white;
+    color: #ffffff;
 
-    box-shadow:var(--shadow-red);
+    font-weight: 700;
+
+    box-shadow: var(--shadow-red);
 
 }
 
