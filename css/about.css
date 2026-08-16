@@ -204,13 +204,18 @@
 
 }
 
-.stat-card h2{
+.stat-card h2,
+.stat-card .stat-number{
 
     font-size: 2.5rem;
 
     color: var(--clr-primary);
 
+    font-weight: 700;
+
     margin-bottom: 10px;
+
+    display: block;
 
 }
 

@@ -1,0 +1,22 @@
+# Gaurav Mishra - Developer Portfolio
+
+> Computer Science Engineer & Frontend Developer specializing in responsive, accessible, and modern web applications.
+
+## Projects
+
+- [Estrip - AI Travel Platform](https://github.com/Gaurav18071/Estrip): Modern travel and tourism platform featuring AI recommendations, weather forecasts, currency converter, and trip planning.
+- [Golf Club Website](https://golf-platform-gn.vercel.app): Premium responsive golf club landing page with modern UI and live demo.
+- [Neuro Quiz](https://neuroquiz-g.vercel.app/): Interactive quiz platform built with Vanilla JavaScript & Vite.
+- [Flapboard Typing Platform](https://github.com/Gaurav18071/typingMaster): Interactive typing improvement platform to test and enhance typing speed, WPM, and accuracy.
+
+## Skills
+
+- Frontend: HTML5, CSS3, JavaScript (ES6+), React, Vite, Modern Responsive Web Design
+- Tools & Utilities: Git, GitHub, REST APIs, Web Accessibility (WCAG), Performance Optimization
+
+## Contact & Links
+
+- [GitHub Profile](https://github.com/Gaurav18071)
+- [LinkedIn Profile](https://in.linkedin.com/in/gaurav18071)
+- [Email Contact](mailto:gauravmishra.dev.27@gmail.com)
+- [Resume](https://gaurav-portfolio-ea7.pages.dev/assets/Gaurav_Mishra_Resume.pdf)

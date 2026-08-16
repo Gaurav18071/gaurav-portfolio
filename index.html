@@ -104,6 +104,9 @@
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="preload" as="style"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -117,36 +120,11 @@
     </noscript>
 
     <!-- ==========================================
-                    CSS FILES
+                    CSS FILES (Bundled & Preloaded)
     =========================================== -->
 
-    <link rel="stylesheet" href="css/variables.css">
-
-    <link rel="stylesheet" href="css/reset.css">
-
-    <link rel="stylesheet" href="css/global.css">
-
-    <link rel="stylesheet" href="css/navbar.css">
-
-    <link rel="stylesheet" href="css/hero.css">
-
-    <link rel="stylesheet" href="css/about.css">
-
-    <link rel="stylesheet" href="css/skills.css">
-
-    <link rel="stylesheet" href="css/projects.css">
-
-    <link rel="stylesheet" href="css/experience.css">
-
-    <link rel="stylesheet" href="css/hire.css">
-
-    <link rel="stylesheet" href="css/footer.css">
-
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="preload" href="css/bundle.css" as="style">
+    <link rel="stylesheet" href="css/bundle.css">
 
     <!-- ==========================================
                     STRUCTURED DATA
@@ -193,11 +171,11 @@
 
     <div class="loader-content">
 
-        <h1 class="loader-logo">
+        <div class="loader-logo">
 
             G<span>A</span>UR<span>A</span>V
 
-        </h1>
+        </div>
 
         <div class="loader-bar">
 
@@ -223,7 +201,7 @@
             G<span>A</span>UR<span>A</span>V
         </a>
 
-        <ul class="nav-menu" id="nav-menu" role="menubar">
+        <ul class="nav-menu" id="nav-menu">
 
             <li><a href="#home" class="nav-link">Home</a></li>
 
@@ -495,7 +473,7 @@
 
                     <div class="stat-card glass-card">
 
-                        <h2>5+</h2>
+                        <span class="stat-number">5+</span>
 
                         <span>Projects</span>
 
@@ -503,7 +481,7 @@
 
                     <div class="stat-card glass-card">
 
-                        <h2>2</h2>
+                        <span class="stat-number">2</span>
 
                         <span>Internships</span>
 
@@ -511,7 +489,7 @@
 
                     <div class="stat-card glass-card">
 
-                        <h2>20+</h2>
+                        <span class="stat-number">20+</span>
 
                         <span>Technologies</span>
 
@@ -519,7 +497,7 @@
 
                     <div class="stat-card glass-card">
 
-                        <h2>∞</h2>
+                        <span class="stat-number">∞</span>
 
                         <span>Always Learning</span>
 
@@ -817,7 +795,7 @@
 
                 <div class="project-buttons">
 
-                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <a href="https://github.com/Gaurav18071/Estrip" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Estrip AI Travel Platform repository on GitHub">
                         GitHub
                     </a>
 
@@ -854,7 +832,8 @@
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Golf Club Website repository on GitHub">GitHub</a>
+                    <a href="https://golf-platform-gn.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visit Golf Club Website live demo">Live Demo</a>
                 </div>
 
             </article>
@@ -882,36 +861,36 @@
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071/NeuroQuiz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
-                    <a href="https://neuroquiz-g.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Live</a>
+                    <a href="https://github.com/Gaurav18071/NeuroQuiz" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Neuro Quiz repository on GitHub">GitHub</a>
+                    <a href="https://neuroquiz-g.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visit Neuro Quiz live demo">Live</a>
                 </div>
 
             </article>
 
-            <!-- Todo -->
+            <!-- Flapboard -->
 
             <article class="project-card glass-card">
 
                 <div class="project-card__media">
                     <picture>
-                        <source srcset="assets/todo.webp" type="image/webp">
-                        <img src="assets/todo.png"
-                            alt="Smart To-Do List application screenshot"
+                        <source srcset="assets/flapboard.webp" type="image/webp">
+                        <img src="assets/flapboard.png"
+                            alt="Flapboard typing improvement platform screenshot"
                             width="600"
-                            height="265"
+                            height="338"
                             loading="lazy"
                             decoding="async">
                     </picture>
                 </div>
 
-                <h3>Smart To-Do List</h3>
+                <h3>Flapboard</h3>
 
                 <p>
-                    Organize daily work with priorities and task tracking.
+                    Interactive typing improvement platform to test and enhance typing speed, WPM, and accuracy.
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/Gaurav18071/typingMaster" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Flapboard Typing Platform repository on GitHub">GitHub</a>
                 </div>
 
             </article>
@@ -939,7 +918,7 @@
                 </p>
 
                 <div class="project-card-buttons">
-                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Developer Portfolio repository on GitHub">GitHub</a>
                 </div>
 
             </article>
@@ -1034,7 +1013,7 @@
                     <p>
 
                         Developing projects including an AI Travel Platform,
-                        Golf Club Website, Task Manager, Smart To-Do List,
+                        Golf Club Website, Flapboard Typing Platform,
                         and this portfolio while continuously improving my
                         frontend development skills.
 
@@ -1283,7 +1262,8 @@
 
         <button
             class="btn btn-primary"
-            id="closeModal">
+            id="closeModal"
+            aria-label="Close modal window">
 
             Awesome!
 
@@ -1341,8 +1321,8 @@
 
                 <p>gauravmishra.dev.27@gmail.com</p>
 
-               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmishra.dev.27@gmail.com"
-   target="_blank" rel="noopener noreferrer">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmishra.dev.27@gmail.com"
+   target="_blank" rel="noopener noreferrer" aria-label="Send email to Gaurav Mishra">
     Send Mail
 </a>
 
@@ -1362,7 +1342,7 @@
 
                 <p>+91 9717067268</p>
 
-                <a href="tel:+919717067268">
+                <a href="tel:+919717067268" aria-label="Call Gaurav Mishra at +91 9717067268">
                     Call Now
                 </a>
 
@@ -1400,7 +1380,7 @@
 
                 <p>Connect Professionally</p>
 
-                <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer">
+                <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer" aria-label="Visit Gaurav Mishra's LinkedIn profile">
                     Visit Profile
                 </a>
 

@@ -211,39 +211,39 @@
 
     border-color:#4fdd1b;
 
-    color:#0ba77d;
+    color:#20e3b2;
 
 }
 .skill-pill:nth-child(6){
 
-    border-color:#d21bea;
+    border-color:#e040fb;
 
-    color:#cc0b28;
+    color:#ff4d6d;
 
 }
 .skill-pill:nth-child(7){
 
-    border-color:#d2931e;
+    border-color:#ffb74d;
 
-    color:#976262;
+    color:#ffd166;
 }
 .skill-pill:nth-child(8){
 
-    border-color:#3f1d21;
+    border-color:#ff5252;
 
-    color:#f20808;
+    color:#ff5252;
 }
 .skill-pill:nth-child(9){
 
-    border-color:#195127;
+    border-color:#40c4ff;
 
-    color:#976262;
+    color:#48cae4;
 }
 .skill-pill:nth-child(10){
 
-    border-color:#fd049a;
+    border-color:#ff4081;
 
-    color:#661313;
+    color:#ff70a6;
 }
 .skill-pill:hover{
 
