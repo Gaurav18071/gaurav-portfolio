@@ -1,18 +1,26 @@
 # Gaurav Mishra - Developer Portfolio
 
-> Computer Science Engineer & Frontend Developer specializing in responsive, accessible, and modern web applications.
+> Computer Science Engineer & Software Developer specializing in responsive, accessible, and modern production-ready software.
 
 ## Projects
 
 - [Estrip - AI Travel Platform](https://github.com/Gaurav18071/Estrip): Modern travel and tourism platform featuring AI recommendations, weather forecasts, currency converter, and trip planning.
-- [Golf Club Website](https://golf-platform-gn.vercel.app): Premium responsive golf club landing page with modern UI and live demo.
-- [Neuro Quiz](https://neuroquiz-g.vercel.app/): Interactive quiz platform built with Vanilla JavaScript & Vite.
-- [Flapboard Typing Platform](https://github.com/Gaurav18071/typingMaster): Interactive typing improvement platform to test and enhance typing speed, WPM, and accuracy.
+- [Golf Charity Platform](https://golf-platform-gn.vercel.app): Full-stack charity and tournament web platform with Next.js, TypeScript, Tailwind CSS, Supabase, Prisma, PostgreSQL/Neon, and Razorpay. (GitHub: https://github.com/Gaurav18071)
+- [NeuroQuiz](https://neuroquiz-g.vercel.app/): Modern interactive quiz platform with HTML5, CSS3, JavaScript (ES6), Vite, GSAP, and LocalStorage. (GitHub: https://github.com/Gaurav18071/NeuroQuiz)
+- [Flapboard Typing Platform](https://typing-master-pied.vercel.app/): Full-stack AI-powered adaptive typing practice platform built with Next.js, TypeScript, Spring Boot, PostgreSQL, and REST APIs. (GitHub: https://github.com/Gaurav18071/typingMaster)
+
+## Experience
+
+- **Frontend Developer Intern** at **Alfido Tech (Online)** [2025 - Completed]: Built & shipped 6+ production React components with zero rollbacks, contributed across 4 sprint cycles with 15+ merged PRs, collaborating via React, Next.js, TypeScript, Tailwind CSS, and Git/GitHub.
 
 ## Skills
 
-- Frontend: HTML5, CSS3, JavaScript (ES6+), React, Vite, Modern Responsive Web Design
-- Tools & Utilities: Git, GitHub, REST APIs, Web Accessibility (WCAG), Performance Optimization
+- Languages: Java, JavaScript, TypeScript, Python, C
+- Backend: Spring Boot, Spring Security, Spring Data JPA/Hibernate, Node.js, Express.js, REST APIs
+- Frontend: React.js, Next.js, Tailwind CSS, Framer Motion
+- Database: PostgreSQL, MongoDB, SQL, Supabase
+- Tools & Platforms: Git, GitHub, Docker, Postman, VS Code, Maven, Vercel, Render
+- Core CS: DSA, OOP, DBMS, Operating Systems, Computer Networks
 
 ## Contact & Links
 

@@ -105,6 +105,34 @@
     transform: translateY(-3px);
 }
 
+.project-card .tech-stack,
+.project-card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 22px 16px;
+    margin-bottom: 0;
+}
+
+.project-card .tech-stack span,
+.project-card-tech span {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--clr-text-light);
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.project-card .tech-stack span:hover,
+.project-card-tech span:hover {
+    background: var(--clr-primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
 /* ======================================================
    PROJECT CARD
 ====================================================== */
