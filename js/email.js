@@ -138,7 +138,7 @@ document.addEventListener("keydown",(e)=>{
 
     if(e.key==="Escape"){
 
-        successModal.classList.remove("show");
+        if(successModal) successModal.classList.remove("show");
 
     }
 

@@ -11,7 +11,8 @@
 
 ## Experience
 
-- **Frontend Developer Intern** at **Alfido Tech (Online)** [2025 - Completed]: Built & shipped 6+ production React components with zero rollbacks, contributed across 4 sprint cycles with 15+ merged PRs, collaborating via React, Next.js, TypeScript, Tailwind CSS, and Git/GitHub.
+- **Data & AI Intern** at **Ministry of Panchayati Raj, Government of India** [Sep 2026 – Present]: Working with government panchayat-level datasets, supporting data organization and management for MoPR's digital initiatives, and contributing to the development of an AI-powered chatbot for the MoPR website.
+- **Frontend Developer Intern** at **Alfido Tech (Online)** [Jul 2026 – Aug 2026]: Built & shipped 6+ production React components with zero rollbacks, contributed across 4 sprint cycles with 15+ merged PRs, collaborating via React, Next.js, TypeScript, Tailwind CSS, and Git/GitHub.
 
 ## Skills
 

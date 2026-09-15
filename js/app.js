@@ -159,21 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================================== */
 
     if (!prefersReducedMotion) {
-        const revealElements = document.querySelectorAll(".reveal");
-
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-        );
-
-        revealElements.forEach((element) => revealObserver.observe(element));
 
         const fadeElements = document.querySelectorAll(".fade-up:not(.active)");
 
@@ -190,8 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         fadeElements.forEach((element) => fadeObserver.observe(element));
+
     } else {
-        document.querySelectorAll(".reveal, .fade-up").forEach((el) => {
+        document.querySelectorAll(".fade-up").forEach((el) => {
             el.classList.add("active");
         });
     }
