@@ -4143,3 +4143,160 @@ iframe {
     background:rgba(255,45,85,.08);
 
 }
+
+/* ======================================================
+   OPEN TO WORK BADGE
+   ====================================================== */
+
+.open-to-work {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    width: fit-content;
+    backdrop-filter: blur(8px);
+}
+
+.otw-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    flex-shrink: 0;
+    animation: otw-pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+}
+
+@keyframes otw-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+    50%  { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* ======================================================
+   TYPEWRITER ANIMATION
+   ====================================================== */
+
+.typed-cursor {
+    display: inline-block;
+    color: var(--clr-primary);
+    font-weight: 300;
+    animation: blink-cursor 0.75s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+    from, to { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+.role-divider {
+    margin: 0 10px;
+    color: var(--clr-primary);
+    opacity: 0.6;
+}
+
+/* ======================================================
+   STAT COUNTER — animated fill ring
+   ====================================================== */
+
+.stat-number[data-count] {
+    transition: color 0.3s ease;
+}
+
+.about-stats .stat-card.counted .stat-number {
+    color: var(--clr-primary);
+}
+
+/* ======================================================
+   FORM VALIDATION — inline errors
+   ====================================================== */
+
+.field-error {
+    display: block;
+    font-size: 0.78rem;
+    color: #f87171;
+    margin-top: 6px;
+    min-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.field-error:not(:empty) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.input-group.has-error input,
+.input-group.has-error textarea,
+.input-group.has-error select {
+    border-color: rgba(248, 113, 113, 0.7) !important;
+    box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.15);
+}
+
+.input-group.has-success input,
+.input-group.has-success textarea,
+.input-group.has-success select {
+    border-color: rgba(74, 222, 128, 0.5) !important;
+}
+
+/* ======================================================
+   404 PAGE RESPONSIVE
+   ====================================================== */
+
+.notfound-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.notfound-content {
+    max-width: 520px;
+}
+
+.notfound-code {
+    font-size: clamp(6rem, 18vw, 10rem);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(135deg, #d80032, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+    letter-spacing: -4px;
+}
+
+.notfound-title {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-family: var(--font-heading);
+    margin-bottom: 14px;
+}
+
+.notfound-desc {
+    color: var(--clr-text-light);
+    margin-bottom: 36px;
+    line-height: 1.7;
+}
+
+.notfound-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,26 @@
+{
+  "name": "Gaurav Mishra | Portfolio",
+  "short_name": "Gaurav",
+  "description": "Portfolio of Gaurav Mishra — Computer Science Engineer & Software Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090909",
+  "theme_color": "#d80032",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/preview.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer"],
+  "lang": "en"
+}

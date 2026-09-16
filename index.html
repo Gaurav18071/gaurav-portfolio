@@ -67,6 +67,12 @@
 
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 
+    <link rel="manifest" href="./manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Gaurav">
+
     <link rel="canonical" href="https://gaurav-portfolio-ea7.pages.dev">
 
     <meta name="robots" content="index, follow">
@@ -245,6 +251,12 @@
 
                 <div class="hero-content">
 
+                    <!-- Open to Work Badge -->
+                    <div class="open-to-work fade-up active" aria-label="Currently open to work opportunities">
+                        <span class="otw-dot" aria-hidden="true"></span>
+                        Open to Opportunities
+                    </div>
+
                     <span class="hero-subtitle fade-up active">
                         👋 Hello, I'm
                     </span>
@@ -256,11 +268,9 @@
                     </h1>
 
                     <h2 class="hero-role fade-up active">
-
-                        Computer Science Engineer
-                        <span>|</span>
-                        Software Developer
-
+                        <span class="role-static">Computer Science Engineer</span>
+                        <span class="role-divider" aria-hidden="true">|</span>
+                        <span class="role-typed" aria-live="polite" aria-atomic="true"></span><span class="typed-cursor" aria-hidden="true">|</span>
                     </h2>
 
                     <p class="hero-description fade-up active">
@@ -456,7 +466,7 @@
 
                             <div class="stat-card glass-card">
 
-                                <span class="stat-number">6+</span>
+                                <span class="stat-number" data-count="6" data-suffix="+">0+</span>
 
                                 <span>Projects</span>
 
@@ -464,7 +474,7 @@
 
                             <div class="stat-card glass-card">
 
-                                <span class="stat-number">4</span>
+                                <span class="stat-number" data-count="4" data-suffix="">0</span>
 
                                 <span>Internships</span>
 
@@ -472,7 +482,7 @@
 
                             <div class="stat-card glass-card">
 
-                                <span class="stat-number">20+</span>
+                                <span class="stat-number" data-count="20" data-suffix="+">0+</span>
 
                                 <span>Technologies</span>
 
@@ -480,7 +490,7 @@
 
                             <div class="stat-card glass-card">
 
-                                <span class="stat-number">∞</span>
+                                <span class="stat-number stat-infinity">∞</span>
 
                                 <span>Always Learning</span>
 
@@ -1181,39 +1191,39 @@
 
                         <!-- Name -->
 
-                        <div class="input-group">
+                        <div class="input-group" id="group-name">
 
                             <label class="visually-hidden" for="contact-name">Your Name</label>
 
-                            <input type="text" id="contact-name" name="name" placeholder="Your Name" autocomplete="name"
-                                required>
+                            <input type="text" id="contact-name" name="name" placeholder="Your Name"
+                                autocomplete="name" minlength="2" required>
+
+                            <span class="field-error" id="err-name" role="alert"></span>
 
                         </div>
 
                         <!-- Email -->
 
-                        <div class="input-group">
+                        <div class="input-group" id="group-email">
 
                             <label class="visually-hidden" for="contact-email">Email Address</label>
 
                             <input type="email" id="contact-email" name="email" placeholder="Email Address"
                                 autocomplete="email" required>
 
+                            <span class="field-error" id="err-email" role="alert"></span>
+
                         </div>
 
                         <!-- Project -->
 
-                        <div class="input-group">
+                        <div class="input-group" id="group-project">
 
                             <label class="visually-hidden" for="contact-project">Project Type</label>
 
                             <select id="contact-project" name="project" required>
 
-                                <option value="" disabled selected>
-
-                                    Project Type
-
-                                </option>
+                                <option value="" disabled selected>Project Type</option>
 
                                 <option>Website Development</option>
 
@@ -1231,16 +1241,20 @@
 
                             </select>
 
+                            <span class="field-error" id="err-project" role="alert"></span>
+
                         </div>
 
                         <!-- Message -->
 
-                        <div class="input-group">
+                        <div class="input-group" id="group-message">
 
                             <label class="visually-hidden" for="contact-message">Project details</label>
 
                             <textarea id="contact-message" rows="6" name="message"
-                                placeholder="Tell me about your project..." required></textarea>
+                                placeholder="Tell me about your project..." minlength="20" required></textarea>
+
+                            <span class="field-error" id="err-message" role="alert"></span>
 
                         </div>
 
