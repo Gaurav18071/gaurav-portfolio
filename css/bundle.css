@@ -3955,8 +3955,7 @@ iframe {
 
 @media (pointer: coarse) {
 
-    .cursor-dot,
-    .cursor-ring {
+    #cursor-particles {
         display: none !important;
     }
 
@@ -4073,10 +4072,10 @@ iframe {
 
 }
 /* ==========================================
-   CUSTOM CURSOR
+   CUSTOM CURSOR — SPARKLE PARTICLES
 ========================================== */
 
-.cursor-dot{
+#cursor-particles{
 
     position:fixed;
 
@@ -4084,63 +4083,13 @@ iframe {
 
     left:0;
 
-    width:8px;
+    width:100vw;
 
-    height:8px;
-
-    border-radius:50%;
-
-    background:var(--clr-primary);
+    height:100vh;
 
     pointer-events:none;
 
     z-index:99999;
-
-    will-change:transform;
-
-}
-
-.cursor-ring{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:42px;
-
-    height:42px;
-
-    border:2px solid var(--clr-primary);
-
-    border-radius:50%;
-
-    pointer-events:none;
-
-    z-index:99998;
-
-    will-change:transform,width,height;
-
-    transition:
-
-    width .2s,
-
-    height .2s,
-
-    border .2s;
-
-}
-
-/* Hover */
-
-.cursor-hover{
-
-    width:70px !important;
-
-    height:70px !important;
-
-    background:rgba(255,45,85,.08);
 
 }
 
@@ -4300,3 +4249,307 @@ iframe {
     flex-wrap: wrap;
 }
 
+
+
+/* ======================================================
+   HERO FLOATING BADGES & TECH PILLS (Space Fillers)
+====================================================== */
+
+.hero .container {
+    width: min(1360px, 92%);
+}
+
+.hero-container {
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 50px !important;
+}
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 480px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 450px !important;
+    height: 450px !important;
+    flex-shrink: 0 !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 3;
+    display: block;
+}
+
+.image-glow {
+    position: absolute;
+    width: 500px !important;
+    height: 500px !important;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 45, 85, 0.38) 0%, rgba(255, 45, 85, 0.12) 50%, transparent 72%);
+    animation: glowPulse 5s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Background Cyber Tech Orbit Rings */
+.hero-tech-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 560px;
+    height: 560px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.orbit-circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 45, 85, 0.22);
+    animation: orbitRotate 35s linear infinite;
+}
+
+.orbit-circle.orbit-2 {
+    inset: -30px;
+    border: 1px solid rgba(255, 45, 85, 0.1);
+    animation: orbitRotateRev 45s linear infinite;
+}
+
+@keyframes orbitRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes orbitRotateRev {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+/* Floating Glass Badges */
+.hero-floating-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+    background: rgba(14, 14, 14, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), 0 0 25px rgba(230, 0, 57, 0.15);
+    z-index: 10;
+    white-space: nowrap;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-floating-badge:hover {
+    transform: translateY(-6px) scale(1.05) !important;
+    border-color: rgba(255, 45, 85, 0.5);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65), 0 0 30px rgba(255, 45, 85, 0.4);
+}
+
+.hero-floating-badge .badge-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.hero-floating-badge .icon-rocket {
+    background: linear-gradient(135deg, rgba(230, 0, 57, 0.3), rgba(255, 45, 85, 0.1));
+    border: 1px solid rgba(255, 45, 85, 0.35);
+    color: var(--clr-primary-light, #ff3366);
+}
+
+.hero-floating-badge .icon-code {
+    background: linear-gradient(135deg, rgba(255, 179, 0, 0.25), rgba(255, 106, 0, 0.1));
+    border: 1px solid rgba(255, 179, 0, 0.35);
+    color: #ffb703;
+}
+
+.hero-floating-badge .icon-status {
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 200, 83, 0.12);
+    border: 1px solid rgba(0, 200, 83, 0.3);
+}
+
+.badge-pulse {
+    width: 11px;
+    height: 11px;
+    background: #00c853;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00c853;
+    animation: statusPulse 2s infinite ease-in-out;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(0.8); }
+}
+
+.badge-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-val {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+}
+
+.badge-desc {
+    font-size: 0.74rem;
+    color: #a5a5a5;
+    line-height: 1.25;
+}
+
+/* Badge Coordinates relative to .hero-image */
+.badge-top-right {
+    top: 30px;
+    right: -25px;
+    animation: floatBadgeA 6s ease-in-out infinite;
+}
+
+.badge-bottom-right {
+    bottom: 45px;
+    right: -15px;
+    animation: floatBadgeB 7s ease-in-out infinite;
+}
+
+.badge-left-bottom {
+    bottom: 5px;
+    left: -20px;
+    animation: floatBadgeC 6.5s ease-in-out infinite;
+}
+
+/* Floating Tech Pills */
+.hero-tech-pill {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(14, 14, 14, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    z-index: 9;
+    white-space: nowrap;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-tech-pill:hover {
+    border-color: rgba(255, 45, 85, 0.5);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 45, 85, 0.4);
+    transform: scale(1.1) !important;
+}
+
+.tech-react {
+    top: -15px;
+    right: 120px;
+    animation: floatPill1 5.5s ease-in-out infinite;
+}
+.tech-react i { color: #61dafb; }
+
+.tech-next {
+    top: 180px;
+    right: -60px;
+    animation: floatPill2 6.8s ease-in-out infinite;
+}
+.tech-next i { color: #ff3366; }
+
+.tech-node {
+    bottom: 150px;
+    right: -50px;
+    animation: floatPill3 7.2s ease-in-out infinite;
+}
+.tech-node i { color: #68a063; }
+
+.tech-java {
+    top: 60px;
+    left: -35px;
+    animation: floatPill4 6.2s ease-in-out infinite;
+}
+.tech-java i { color: #e76f51; }
+
+/* Float Keyframes */
+@keyframes floatBadgeA {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes floatBadgeB {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+@keyframes floatBadgeC {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes floatPill1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes floatPill2 {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(8px); }
+}
+
+@keyframes floatPill3 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+@keyframes floatPill4 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-6px, -6px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+    .badge-top-right { right: 0; }
+    .badge-bottom-right { right: 0; }
+    .tech-next { right: -20px; }
+    .tech-node { right: -20px; }
+}
+
+@media (max-width: 992px) {
+    .hero-floating-badge,
+    .hero-tech-pill,
+    .hero-tech-orbit {
+        display: none !important;
+    }
+}

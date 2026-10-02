@@ -1,71 +1,19 @@
 /* ==========================================
-   CUSTOM CURSOR
+   CUSTOM CURSOR — SPARKLE PARTICLES
 ========================================== */
 
-.cursor-dot{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
-
-    background:var(--clr-primary);
-
-    pointer-events:none;
-
-    z-index:99999;
-
-    will-change:transform;
-
+#cursor-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 99999;
 }
 
-.cursor-ring{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:42px;
-
-    height:42px;
-
-    border:2px solid var(--clr-primary);
-
-    border-radius:50%;
-
-    pointer-events:none;
-
-    z-index:99998;
-
-    will-change:transform,width,height;
-
-    transition:
-
-    width .2s,
-
-    height .2s,
-
-    border .2s;
-
-}
-
-/* Hover */
-
-.cursor-hover{
-
-    width:70px !important;
-
-    height:70px !important;
-
-    background:rgba(255,45,85,.08);
-
+@media (pointer: coarse) {
+    #cursor-particles {
+        display: none !important;
+    }
 }

@@ -128,7 +128,7 @@
                     CSS FILES
     =========================================== -->
 
-    <link rel="stylesheet" href="css/bundle.css">
+    <link rel="stylesheet" href="css/bundle.css?v=1.1">
 
     <!-- ==========================================
                     STRUCTURED DATA
@@ -163,9 +163,7 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="cursor-dot" aria-hidden="true"></div>
-
-    <div class="cursor-ring" aria-hidden="true"></div>
+    <canvas id="cursor-particles" aria-hidden="true"></canvas>
 
 
     <!-- ==========================================
@@ -337,16 +335,66 @@
 
                 <div class="hero-image fade-up active">
 
+                    <!-- Main Avatar -->
                     <div class="image-wrapper float">
-
                         <div class="image-glow"></div>
-
                         <picture>
                             <source srcset="assets/gaurav.webp" type="image/webp">
-                            <img src="assets/gaurav.jpg" alt="Portrait of Gaurav Mishra, Software Developer" width="430"
-                                height="430" fetchpriority="high" decoding="async">
+                            <img src="assets/gaurav.jpg" alt="Portrait of Gaurav Mishra, Software Developer" width="450"
+                                height="450" fetchpriority="high" decoding="async">
                         </picture>
+                    </div>
 
+                    <!-- Cyber Orbital Rings -->
+                    <div class="hero-tech-orbit" aria-hidden="true">
+                        <div class="orbit-circle orbit-1"></div>
+                        <div class="orbit-circle orbit-2"></div>
+                    </div>
+
+                    <!-- Floating Stat Badges -->
+                    <div class="hero-floating-badge badge-top-right">
+                        <div class="badge-icon icon-rocket"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+                        <div class="badge-details">
+                            <span class="badge-val">6+ Projects</span>
+                            <span class="badge-desc">Built &amp; Deployed</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-floating-badge badge-bottom-right">
+                        <div class="badge-icon icon-status"><span class="badge-pulse"></span></div>
+                        <div class="badge-details">
+                            <span class="badge-val">Open to Work</span>
+                            <span class="badge-desc">Full-Stack Engineer</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-floating-badge badge-left-bottom">
+                        <div class="badge-icon icon-code"><i class="fas fa-code" aria-hidden="true"></i></div>
+                        <div class="badge-details">
+                            <span class="badge-val">Final Year CSE</span>
+                            <span class="badge-desc">Software Developer</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Tech Stack Tags -->
+                    <div class="hero-tech-pill tech-react" title="React.js">
+                        <i class="fab fa-react" aria-hidden="true"></i>
+                        <span>React</span>
+                    </div>
+
+                    <div class="hero-tech-pill tech-next" title="Next.js">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
+                        <span>Next.js</span>
+                    </div>
+
+                    <div class="hero-tech-pill tech-node" title="Node.js">
+                        <i class="fab fa-node-js" aria-hidden="true"></i>
+                        <span>Node.js</span>
+                    </div>
+
+                    <div class="hero-tech-pill tech-java" title="Java">
+                        <i class="fab fa-java" aria-hidden="true"></i>
+                        <span>Java</span>
                     </div>
 
                 </div>

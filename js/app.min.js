@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section");
     const progressBar = document.getElementById("progress-bar");
     const loader = document.getElementById("loader");
-    const dot = document.querySelector(".cursor-dot");
-    const ring = document.querySelector(".cursor-ring");
+    const particleCanvas = document.getElementById("cursor-particles");
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
@@ -113,45 +112,149 @@ document.addEventListener("DOMContentLoaded", () => {
     onScroll();
 
     /* ==========================================
-       CUSTOM CURSOR — desktop only
+       CUSTOM CURSOR — SPARKLE PARTICLES TRAIL
     ========================================== */
 
-    if (dot && ring && !isCoarsePointer && !prefersReducedMotion) {
-        let cursorX = 0;
-        let cursorY = 0;
-        let ringX = 0;
-        let ringY = 0;
-        let cursorTicking = false;
+    if (particleCanvas && !isCoarsePointer && !prefersReducedMotion) {
+        const ctx = particleCanvas.getContext("2d");
+        let width = 0;
+        let height = 0;
+        let dpr = window.devicePixelRatio || 1;
 
-        document.addEventListener("mousemove", (e) => {
-            cursorX = e.clientX;
-            cursorY = e.clientY;
+        const resizeCanvas = () => {
+            dpr = window.devicePixelRatio || 1;
+            width = window.innerWidth;
+            height = window.innerHeight;
+            particleCanvas.width = width * dpr;
+            particleCanvas.height = height * dpr;
+            if (ctx.resetTransform) ctx.resetTransform();
+            ctx.scale(dpr, dpr);
+        };
 
-            dot.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
 
-            if (!cursorTicking) {
-                cursorTicking = true;
-                requestAnimationFrame(function animateRing() {
-                    ringX += (cursorX - ringX) * 0.18;
-                    ringY += (cursorY - ringY) * 0.18;
-                    ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+        const colors = [
+            "#ff2d55",
+            "#e60039",
+            "#ff4d6d",
+            "#ff6a00",
+            "#ffb703",
+            "#ffd166",
+            "#ffffff"
+        ];
 
-                    if (Math.abs(cursorX - ringX) > 0.8 || Math.abs(cursorY - ringY) > 0.5) {
-                        requestAnimationFrame(animateRing);
-                    } else {
-                        cursorTicking = false;
-                    }
-                });
+        const particles = [];
+        let animId = null;
+        let lastX = null;
+        let lastY = null;
+
+        const spawnParticle = (x, y, extraSpeed = 1) => {
+            const size = Math.random() * 4.5 + 3;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const moveAngle = Math.random() * Math.PI * 2;
+            const speed = (Math.random() * 1.5 + 0.4) * extraSpeed;
+
+            particles.push({
+                x: x + (Math.random() - 0.5) * 6,
+                y: y + (Math.random() - 0.5) * 6,
+                size: size,
+                color: color,
+                alpha: 1,
+                decay: Math.random() * 0.016 + 0.016,
+                vx: Math.cos(moveAngle) * speed,
+                vy: Math.sin(moveAngle) * speed + 0.35,
+                angle: Math.random() * Math.PI * 2,
+                spin: (Math.random() - 0.5) * 0.12
+            });
+        };
+
+        const render = () => {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vx *= 0.96;
+                p.vy *= 0.96;
+                p.angle += p.spin;
+                p.alpha -= p.decay;
+
+                if (p.alpha <= 0) {
+                    particles.splice(i, 1);
+                    continue;
+                }
+
+                const currentSize = p.size * (0.35 + 0.65 * p.alpha);
+
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate(p.angle);
+                ctx.globalAlpha = Math.max(0, p.alpha);
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = p.color;
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-currentSize / 2, -currentSize / 2, currentSize, currentSize);
+                ctx.restore();
+            }
+
+            if (particles.length > 0) {
+                animId = requestAnimationFrame(render);
+            } else {
+                animId = null;
+                ctx.clearRect(0, 0, width, height);
+            }
+        };
+
+        const startLoop = () => {
+            if (!animId) {
+                animId = requestAnimationFrame(render);
+            }
+        };
+
+        window.addEventListener("pointermove", (e) => {
+            const currentX = e.clientX;
+            const currentY = e.clientY;
+
+            if (lastX === null) {
+                lastX = currentX;
+                lastY = currentY;
+                spawnParticle(currentX, currentY);
+                startLoop();
+                return;
+            }
+
+            const dx = currentX - lastX;
+            const dy = currentY - lastY;
+            const dist = Math.hypot(dx, dy);
+
+            if (dist > 3) {
+                const steps = Math.min(Math.floor(dist / 5), 6);
+                const count = Math.max(1, steps);
+                for (let i = 0; i < count; i++) {
+                    const t = (i + 1) / count;
+                    spawnParticle(lastX + dx * t, lastY + dy * t);
+                }
+                lastX = currentX;
+                lastY = currentY;
+                startLoop();
             }
         }, { passive: true });
 
-        document.querySelectorAll("a, button, .glass-card, .skill-pill").forEach((item) => {
-            item.addEventListener("mouseenter", () => ring.classList.add("cursor-hover"));
-            item.addEventListener("mouseleave", () => ring.classList.remove("cursor-hover"));
+        window.addEventListener("pointerdown", (e) => {
+            for (let i = 0; i < 12; i++) {
+                spawnParticle(e.clientX, e.clientY, 2);
+            }
+            startLoop();
+        }, { passive: true });
+
+        window.addEventListener("pointerleave", () => {
+            lastX = null;
+            lastY = null;
         });
-    } else if (dot && ring) {
-        dot.style.display = "none";
-        ring.style.display = "none";
+    } else if (particleCanvas) {
+        particleCanvas.style.display = "none";
     }
 
     /* ==========================================
