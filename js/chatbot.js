@@ -99,9 +99,8 @@ class PortfolioChatbot {
     }
     
     init() {
-        this.createChatbotHTML();
-        this.attachEventListeners();
-        this.showWelcomeMessage();
+        // Chatbot is now integrated in hero terminal - no separate floating button needed
+        return;
     }
     
     createChatbotHTML() {

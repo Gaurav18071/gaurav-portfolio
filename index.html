@@ -78,59 +78,31 @@
     <meta name="robots" content="index, follow">
 
     <!-- ==========================================
-                    PRELOAD — HERO ONLY
-    =========================================== -->
-
-    <link rel="preload" as="image" href="assets/gaurav.webp" type="image/webp" fetchpriority="high">
-
-    <!-- ==========================================
                     GOOGLE FONTS
     =========================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
-            rel="stylesheet">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- ==========================================
-                    FONT AWESOME — non-blocking
+                    FONT AWESOME
     =========================================== -->
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-solid-900.woff2"
         as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/webfonts/fa-brands-400.woff2"
         as="font" type="font/woff2" crossorigin>
-
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        media="print" onload="this.media='all'">
-
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- ==========================================
                     CSS FILES
     =========================================== -->
 
-    <link rel="stylesheet" href="css/bundle.css?v=1.1">
+    <link rel="stylesheet" href="css/bundle.css?v=1.2">
+    <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/performance-section.css">
     <link rel="stylesheet" href="css/visitor-counter.css">
 
@@ -248,156 +220,114 @@
 
             <div class="container hero-container">
 
-                <!-- ================= LEFT ================= -->
+                <!-- ================= LEFT: HERO CONTENT ================= -->
 
                 <div class="hero-content">
 
-                    <!-- Open to Work Badge -->
-                    <div class="open-to-work fade-up active" aria-label="Currently open to work opportunities">
-                        <span class="otw-dot" aria-hidden="true"></span>
-                        Open to Opportunities
+                    <!-- Status Pill -->
+                    <div class="term-status-badge fade-up active" aria-label="Available for hire">
+                        <span class="term-status-dot" aria-hidden="true"></span>
+                        <span class="term-status-text">AVAILABLE &middot; open to roles &amp; freelance</span>
                     </div>
 
-                    <span class="hero-subtitle fade-up active">
-                        👋 Hello, I'm
-                    </span>
-
-                    <h1 class="hero-title fade-up active">
-
-                        G<span>A</span>UR<span>A</span>V
-
+                    <!-- Title -->
+                    <h1 class="term-hero-title fade-up active">
+                        <span class="term-prompt-sym">$</span> hi, I'm<br>
+                        <span class="term-hero-name">Gaurav</span><span class="term-block-cursor" aria-hidden="true"></span>
                     </h1>
 
-                    <h2 class="hero-role fade-up active">
-                        <span class="role-static">Computer Science Engineer</span>
-                        <span class="role-divider" aria-hidden="true">|</span>
-                        <span class="role-typed" aria-live="polite" aria-atomic="true"></span><span class="typed-cursor" aria-hidden="true">|</span>
-                    </h2>
-
-                    <p class="hero-description fade-up active">
-
-                        Building modern, responsive web experiences with clean code,
-                        thoughtful design, and a passion for creating impactful digital
-                        products.
-
+                    <!-- Role -->
+                    <p class="term-hero-role fade-up active">
+                        Computer Science Engineer <span class="term-divider">|</span> Full-Stack Developer <span class="term-divider">|</span> Delhi &harr; Remote
                     </p>
 
-                    <!-- Buttons -->
+                    <!-- Bio Description with Green Accents -->
+                    <p class="term-hero-description fade-up active">
+                        I build and ship <span class="term-accent-text">production software end-to-end</span>, web and backend:
+                        real-time platforms, Spring Boot &amp; Next.js systems, scalable architectures.
+                        With a strong foundation in <span class="term-accent-text">Computer Science Engineering</span>, I transform complex logic into clean, robust products.
+                        Lately I've been wiring <span class="term-accent-text">AI &amp; LLMs</span> into real product surfaces.
+                    </p>
 
-                    <div class="hero-buttons">
-
-                        <a href="#hire" class="btn btn-primary">
-                            Hire Me
+                    <!-- Actions -->
+                    <div class="term-hero-actions fade-up active">
+                        <a href="#contact" class="btn-term-primary">
+                            <span class="term-btn-arrow">&rarr;</span> get in touch
                         </a>
-
-                        <a href="assets/Gaurav_Mishra_Resume.pdf" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary">
-
-                            <i class="fas fa-eye" aria-hidden="true"></i>
-                            View Resume
-
+                        <a href="#projects" class="btn-term-secondary">
+                            <span class="term-btn-prefix">$</span> ls projects/
                         </a>
-
-                        <a href="assets/Gaurav_Mishra_Resume.pdf" download="Gaurav_Mishra_Resume.pdf"
-                            class="btn btn-outline">
-
-                            <i class="fas fa-download" aria-hidden="true"></i>
-                            Download Resume
-
-                        </a>
-
-                    </div>
-
-                    <!-- Social -->
-
-                    <div class="hero-social fade-up active">
-
-                        <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer"
-                            aria-label="Visit Gaurav on GitHub">
-
-                            <i class="fab fa-github" aria-hidden="true"></i>
-
-                        </a>
-
-                        <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer"
-                            aria-label="Connect with Gaurav on LinkedIn">
-
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-
-                        </a>
-
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmishra.dev.27@gmail.com"
-                            target="_blank" rel="noopener noreferrer" aria-label="Send email to Gaurav">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                        </a>
+                        <div class="term-social-dock">
+                            <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer"
+                                aria-label="Visit Gaurav on GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer"
+                                aria-label="Connect with Gaurav on LinkedIn">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                            <a href="mailto:gauravmishra.dev.27@gmail.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Send email to Gaurav">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
 
-                <!-- ================= RIGHT ================= -->
+                <!-- ================= RIGHT: INTERACTIVE TERMINAL ================= -->
 
-                <div class="hero-image fade-up active">
+                <div class="hero-terminal-wrapper fade-up active">
 
-                    <!-- Main Avatar -->
-                    <div class="image-wrapper float">
-                        <div class="image-glow"></div>
-                        <picture>
-                            <source srcset="assets/gaurav.webp" type="image/webp">
-                            <img src="assets/gaurav.jpg" alt="Portrait of Gaurav Mishra, Software Developer" width="450"
-                                height="450" fetchpriority="high" decoding="async">
-                        </picture>
-                    </div>
+                    <div class="terminal-window" id="heroTerminalWindow">
 
-                    <!-- Cyber Orbital Rings -->
-                    <div class="hero-tech-orbit" aria-hidden="true">
-                        <div class="orbit-circle orbit-1"></div>
-                        <div class="orbit-circle orbit-2"></div>
-                    </div>
-
-                    <!-- Floating Stat Badges -->
-                    <div class="hero-floating-badge badge-top-right">
-                        <div class="badge-icon icon-rocket"><i class="fas fa-rocket" aria-hidden="true"></i></div>
-                        <div class="badge-details">
-                            <span class="badge-val">6+ Projects</span>
-                            <span class="badge-desc">Built &amp; Deployed</span>
+                        <!-- Terminal Titlebar -->
+                        <div class="terminal-titlebar">
+                            <div class="terminal-controls" aria-hidden="true">
+                                <span class="term-ctrl-dot dot-dim"></span>
+                                <span class="term-ctrl-dot dot-dim"></span>
+                                <span class="term-ctrl-dot dot-accent"></span>
+                            </div>
+                            <div class="terminal-filepath">
+                                ~/ask-me.sh
+                            </div>
+                            <div class="terminal-live-status">
+                                <span class="term-ready-dot" aria-hidden="true"></span>
+                                <span>ready</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="hero-floating-badge badge-bottom-right">
-                        <div class="badge-icon icon-status"><span class="badge-pulse"></span></div>
-                        <div class="badge-details">
-                            <span class="badge-val">Open to Work</span>
-                            <span class="badge-desc">Full-Stack Engineer</span>
+                        <!-- Terminal Output / Scroll Area -->
+                        <div class="terminal-scroll-area" id="terminalScrollArea">
+                            
+                            <div class="terminal-system-banner">
+                                <span class="term-comment">// system</span>
+                                <div class="term-greeting">connected to gaurav.dev &mdash; ask anything.</div>
+                            </div>
+
+                            <!-- Dynamic Chat Output -->
+                            <div class="terminal-conversation" id="terminalConversation"></div>
+
                         </div>
-                    </div>
 
-                    <div class="hero-floating-badge badge-left-bottom">
-                        <div class="badge-icon icon-code"><i class="fas fa-code" aria-hidden="true"></i></div>
-                        <div class="badge-details">
-                            <span class="badge-val">Final Year CSE</span>
-                            <span class="badge-desc">Software Developer</span>
+                        <!-- Suggestion Chips Row -->
+                        <div class="terminal-quick-chips" id="terminalQuickChips">
+                            <button type="button" class="term-chip" data-ask="what is your stack?">what is your stack?</button>
+                            <button type="button" class="term-chip" data-ask="are you available for hire?">are you available for hire?</button>
+                            <button type="button" class="term-chip" data-ask="tell me about a recent project">tell me about a recent project</button>
+                            <button type="button" class="term-chip" data-ask="how do I contact you?">how do I contact you?</button>
                         </div>
-                    </div>
 
-                    <!-- Floating Tech Stack Tags -->
-                    <div class="hero-tech-pill tech-react" title="React.js">
-                        <i class="fab fa-react" aria-hidden="true"></i>
-                        <span>React</span>
-                    </div>
+                        <!-- Terminal Input Prompt -->
+                        <form class="terminal-input-bar" id="terminalForm">
+                            <span class="term-prompt-arrow" aria-hidden="true">&gt;</span>
+                            <input type="text" id="terminalInput" class="term-cmd-input" 
+                                placeholder="ask anything about gaurav..." autocomplete="off" spellcheck="false">
+                            <button type="submit" class="term-submit-btn" aria-label="Send query">
+                                send &#x21B5;
+                            </button>
+                        </form>
 
-                    <div class="hero-tech-pill tech-next" title="Next.js">
-                        <i class="fas fa-layer-group" aria-hidden="true"></i>
-                        <span>Next.js</span>
-                    </div>
-
-                    <div class="hero-tech-pill tech-node" title="Node.js">
-                        <i class="fab fa-node-js" aria-hidden="true"></i>
-                        <span>Node.js</span>
-                    </div>
-
-                    <div class="hero-tech-pill tech-java" title="Java">
-                        <i class="fab fa-java" aria-hidden="true"></i>
-                        <span>Java</span>
                     </div>
 
                 </div>
@@ -937,7 +867,7 @@
                             <picture>
                                 <source srcset="assets/golf-course.webp" type="image/webp">
                                 <img src="assets/golf-course.jpg" alt="Golf Charity Platform landing page screenshot"
-                                    width="600" height="900" loading="lazy" decoding="async">
+                                    width="600" height="273" loading="lazy" decoding="async">
                             </picture>
                         </div>
 
@@ -1508,6 +1438,8 @@
 
         </section>
 
+    </main>
+
     <!-- ================= FOOTER ================= -->
     <!-- ==========================================
                 FOOTER
@@ -1523,14 +1455,6 @@
                     VISITOR STATS & LIVE COUNTER
             =========================================== -->
             <div class="footer-stats-wrap">
-                <div class="footer-editorial-socials">
-                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <span class="bullet-sep">&middot;</span>
-                    <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <span class="bullet-sep">&middot;</span>
-                    <a href="https://instagram.com/gaurav18071" target="_blank" rel="noopener noreferrer">Instagram</a>
-                </div>
-
                 <div class="footer-stats-counter">
                     <div class="footer-stat-item">
                         <span class="footer-stat-number" id="statViewsCount">8,907</span>
@@ -1574,8 +1498,7 @@
     =========================================== -->
 
     <script src="js/app.min.js" defer></script>
-    <script src="js/email.js" defer></script>
-    <script src="js/chatbot.js" defer></script>
+    <script src="js/hero-terminal.js" defer></script>
     <script src="js/performance-section.js" defer></script>
     <script src="js/visitor-counter.js" defer></script>
 

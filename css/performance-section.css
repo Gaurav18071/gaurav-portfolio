@@ -309,3 +309,54 @@
         page-break-inside: avoid;
     }
 }
+
+
+/* ==========================================
+   HERO PERFORMANCE METRICS
+========================================== */
+
+.hero-performance-metrics {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-performance-metrics .performance-container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.hero-performance-metrics .perf-header {
+    margin-bottom: 2rem;
+}
+
+.hero-performance-metrics .perf-title {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-performance-metrics .perf-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-performance-metrics .perf-grid {
+    gap: 2rem;
+}
+
+/* Responsive for Hero Integration */
+@media (max-width: 968px) {
+    .hero-performance-metrics {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+    
+    .hero-performance-metrics .perf-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-performance-metrics {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+}

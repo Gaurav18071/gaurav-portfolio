@@ -2,6 +2,7 @@
    WEB3FORMS CONTACT FORM
    ========================================================== */
 
+(function () {
 const contactForm = document.getElementById("contactForm");
 const submitBtn = document.getElementById("submitBtn");
 const successModal = document.getElementById("successModal");
@@ -153,3 +154,4 @@ document.addEventListener("keydown",(e)=>{
     }
 
 });
+})();

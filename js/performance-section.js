@@ -62,18 +62,38 @@ class PerformanceSection {
                 console.log('LCP not supported');
             }
             
-            // CLS - Cumulative Layout Shift
+            // CLS - Cumulative Layout Shift (Web Vitals Spec: Session Windows)
             try {
                 let clsValue = 0;
+                let sessionValue = 0;
+                let sessionEntries = [];
+
                 const clsObserver = new PerformanceObserver((entryList) => {
                     for (const entry of entryList.getEntries()) {
+                        // Only count layout shifts without recent user input
                         if (!entry.hadRecentInput) {
-                            clsValue += entry.value;
-                            this.updateMetric('cls', clsValue);
+                            const firstSessionEntry = sessionEntries[0];
+                            const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
+
+                            // Session window: gap < 1000ms and window length < 5000ms
+                            if (sessionValue &&
+                                (entry.startTime - lastSessionEntry.startTime < 1000) &&
+                                (entry.startTime - firstSessionEntry.startTime < 5000)) {
+                                sessionValue += entry.value;
+                                sessionEntries.push(entry);
+                            } else {
+                                sessionValue = entry.value;
+                                sessionEntries = [entry];
+                            }
+
+                            if (sessionValue > clsValue) {
+                                clsValue = sessionValue;
+                                this.updateMetric('cls', clsValue);
+                            }
                         }
                     }
                 });
-                clsObserver.observe({ entryTypes: ['layout-shift'] });
+                clsObserver.observe({ type: 'layout-shift', buffered: true });
             } catch (e) {
                 console.log('CLS not supported');
             }
@@ -99,7 +119,7 @@ class PerformanceSection {
                     
                     // Default CLS
                     if (this.metrics.cls.value === 0) {
-                        this.updateMetric('cls', 0.02); // Assume good if not measurable
+                        this.updateMetric('cls', 0); // Good (0.00) if no shifts occurred
                     }
                 }
             }, 100);
