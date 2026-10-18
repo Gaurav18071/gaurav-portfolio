@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const size = Math.random() * 4.5 + 3;
             const color = colors[Math.floor(Math.random() * colors.length)];
             const moveAngle = Math.random() * Math.PI * 2;
-            const speed = (Math.random() * 1.5 + 0.4) * extraSpeed;
+            const speed = (Math.random() * 1.1 + 0.25) * extraSpeed;
 
             particles.push({
                 x: x + (Math.random() - 0.5) * 6,
@@ -161,11 +161,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 size: size,
                 color: color,
                 alpha: 1,
-                decay: Math.random() * 0.016 + 0.016,
+                decay: Math.random() * 0.004 + 0.005, // longer duration: ~2.0 - 2.8 seconds
                 vx: Math.cos(moveAngle) * speed,
-                vy: Math.sin(moveAngle) * speed + 0.35,
+                vy: Math.sin(moveAngle) * speed + 0.16, // gentle floating drift
                 angle: Math.random() * Math.PI * 2,
-                spin: (Math.random() - 0.5) * 0.12
+                spin: (Math.random() - 0.5) * 0.07
             });
         };
 
@@ -176,8 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const p = particles[i];
                 p.x += p.vx;
                 p.y += p.vy;
-                p.vx *= 0.96;
-                p.vy *= 0.96;
+                p.vx *= 0.978;
+                p.vy *= 0.978;
                 p.angle += p.spin;
                 p.alpha -= p.decay;
 
@@ -186,7 +186,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     continue;
                 }
 
-                const currentSize = p.size * (0.35 + 0.65 * p.alpha);
+                // Remains clear and visible longer, then fades out smoothly
+                const currentSize = p.size * (0.35 + 0.65 * Math.min(1, p.alpha * 1.35));
 
                 ctx.save();
                 ctx.translate(p.x, p.y);
@@ -229,8 +230,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const dy = currentY - lastY;
             const dist = Math.hypot(dx, dy);
 
-            if (dist > 3) {
-                const steps = Math.min(Math.floor(dist / 5), 6);
+            if (dist > 5) {
+                const steps = Math.min(Math.floor(dist / 7), 5);
                 const count = Math.max(1, steps);
                 for (let i = 0; i < count; i++) {
                     const t = (i + 1) / count;
