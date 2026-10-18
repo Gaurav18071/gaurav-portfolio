@@ -1,0 +1,311 @@
+/* ==========================================
+   PERFORMANCE METRICS SECTION (Static)
+========================================== */
+
+.performance-section {
+    background: #000000;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.performance-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(230, 0, 57, 0.05), transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(230, 0, 57, 0.03), transparent 50%);
+    pointer-events: none;
+}
+
+.performance-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.perf-header {
+    flex-shrink: 0;
+    max-width: 300px;
+}
+
+.perf-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.perf-subtitle {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+.perf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 3rem;
+    flex: 1;
+}
+
+.perf-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.perf-metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perf-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.perf-description {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.25rem;
+}
+
+.perf-value-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.perf-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    color: #ffd700;
+    line-height: 1;
+}
+
+.perf-unit {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+.perf-status {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.perf-status.good {
+    background: rgba(0, 200, 83, 0.2);
+    color: #00c853;
+}
+
+.perf-status.needs-improvement {
+    background: rgba(255, 179, 0, 0.2);
+    color: #ffb300;
+}
+
+.perf-status.poor {
+    background: rgba(255, 23, 68, 0.2);
+    color: #ff1744;
+}
+
+.perf-bar {
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.perf-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    border-radius: 3px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.perf-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.perf-bar-fill.good {
+    background: linear-gradient(90deg, #00c853, #00e676);
+}
+
+.perf-bar-fill.needs-improvement {
+    background: linear-gradient(90deg, #ffb300, #ffd54f);
+}
+
+.perf-bar-fill.poor {
+    background: linear-gradient(90deg, #ff1744, #ff5252);
+}
+
+/* Loading State */
+.perf-value.loading {
+    color: rgba(255, 255, 255, 0.3);
+    animation: pulse-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-loading {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Decorative Elements */
+.perf-decoration {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(230, 0, 57, 0.1), transparent);
+    pointer-events: none;
+}
+
+.perf-decoration:first-child {
+    top: -50px;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.perf-decoration:last-child {
+    bottom: -50px;
+    right: 15%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .perf-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .performance-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    
+    .perf-header {
+        max-width: 100%;
+    }
+    
+    .perf-grid {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .performance-section {
+        padding: 0;
+    }
+    
+    .performance-container {
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .perf-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .perf-value {
+        font-size: 2rem;
+    }
+    
+    .perf-title {
+        font-size: 0.7rem;
+    }
+    
+    .perf-subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .perf-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .perf-bar-fill,
+    .perf-decoration {
+        animation: none;
+        transition: none;
+    }
+    
+    .perf-bar-fill::after {
+        animation: none;
+    }
+}
+
+/* Print */
+@media print {
+    .performance-section {
+        page-break-inside: avoid;
+    }
+}

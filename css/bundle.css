@@ -3949,17 +3949,6 @@ iframe {
 
 }
 
-/* =============================
-   Touch devices — hide custom cursor
-============================= */
-
-@media (pointer: coarse) {
-
-    #cursor-particles {
-        display: none !important;
-    }
-
-}
 /* ==========================================
    CONTACT
 ========================================== */
@@ -4069,27 +4058,6 @@ iframe {
         grid-template-columns:1fr;
 
     }
-
-}
-/* ==========================================
-   CUSTOM CURSOR — SPARKLE PARTICLES
-========================================== */
-
-#cursor-particles{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100vw;
-
-    height:100vh;
-
-    pointer-events:none;
-
-    z-index:99999;
 
 }
 
@@ -4553,3 +4521,13 @@ iframe {
         display: none !important;
     }
 }
+
+/* ==========================================
+   CHATBOT IMPORT
+========================================== */
+@import 'chatbot.css';
+
+/* ==========================================
+   PERFORMANCE METRICS IMPORT
+========================================== */
+@import 'performance-metrics.css';

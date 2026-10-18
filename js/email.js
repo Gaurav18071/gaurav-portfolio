@@ -6,6 +6,16 @@ const contactForm = document.getElementById("contactForm");
 const submitBtn = document.getElementById("submitBtn");
 const successModal = document.getElementById("successModal");
 const closeModal = document.getElementById("closeModal");
+const contactStatus = document.getElementById("contact-status");
+
+// Select placeholder colour fix
+const projectSelect = document.getElementById("contact-project");
+if (projectSelect) {
+    projectSelect.addEventListener("change", () => {
+        projectSelect.classList.toggle("has-value", projectSelect.value !== "");
+    });
+}
+
 
 if (contactForm) {
 

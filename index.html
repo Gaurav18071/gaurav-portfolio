@@ -129,6 +129,11 @@
     =========================================== -->
 
     <link rel="stylesheet" href="css/bundle.css?v=1.1">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/performance-section.css">
+    <link rel="stylesheet" href="css/visitor-counter.css">
+
 
     <!-- ==========================================
                     STRUCTURED DATA
@@ -162,8 +167,6 @@
 
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <canvas id="cursor-particles" aria-hidden="true"></canvas>
 
 
     <!-- ==========================================
@@ -410,6 +413,84 @@
             </a>
 
         </section>
+
+        <!-- ==========================================
+                PERFORMANCE METRICS SECTION
+========================================== -->
+
+        <section class="performance-section">
+            <div class="perf-decoration"></div>
+            <div class="perf-decoration"></div>
+            
+            <div class="performance-container">
+                <div class="perf-header">
+                    <div class="perf-title">MEASURED IN YOUR BROWSER, JUST NOW.</div>
+                    <div class="perf-subtitle">Core Web Vitals from your real-time browsing. Performance API. No screenshots. No lab runs.</div>
+                </div>
+                
+                <div class="perf-grid">
+                    <div class="perf-metric" data-perf-metric="ttfb">
+                        <div class="perf-metric-header">
+                            <span class="perf-label">TTFB</span>
+                            <span class="perf-status good">GOOD</span>
+                        </div>
+                        <div class="perf-description">Time to first byte</div>
+                        <div class="perf-value-wrapper">
+                            <span class="perf-value loading">0</span>
+                            <span class="perf-unit">ms</span>
+                        </div>
+                        <div class="perf-bar">
+                            <div class="perf-bar-fill good" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="perf-metric" data-perf-metric="fcp">
+                        <div class="perf-metric-header">
+                            <span class="perf-label">FCP</span>
+                            <span class="perf-status good">GOOD</span>
+                        </div>
+                        <div class="perf-description">First contentful paint</div>
+                        <div class="perf-value-wrapper">
+                            <span class="perf-value loading">0</span>
+                            <span class="perf-unit">ms</span>
+                        </div>
+                        <div class="perf-bar">
+                            <div class="perf-bar-fill good" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="perf-metric" data-perf-metric="lcp">
+                        <div class="perf-metric-header">
+                            <span class="perf-label">LCP</span>
+                            <span class="perf-status good">GOOD</span>
+                        </div>
+                        <div class="perf-description">Largest contentful paint</div>
+                        <div class="perf-value-wrapper">
+                            <span class="perf-value loading">0</span>
+                            <span class="perf-unit">ms</span>
+                        </div>
+                        <div class="perf-bar">
+                            <div class="perf-bar-fill good" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="perf-metric" data-perf-metric="cls">
+                        <div class="perf-metric-header">
+                            <span class="perf-label">CLS</span>
+                            <span class="perf-status good">GOOD</span>
+                        </div>
+                        <div class="perf-description">Cumulative layout shift</div>
+                        <div class="perf-value-wrapper">
+                            <span class="perf-value loading">0.00</span>
+                        </div>
+                        <div class="perf-bar">
+                            <div class="perf-bar-fill good" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- ==========================================
                 ABOUT SECTION
 ========================================== -->
@@ -1157,328 +1238,222 @@
         </section>
 
 
-        <!-- Hire Me -->
         <!-- ==========================================
-                HIRE ME SECTION
-========================================== -->
-
-        <section class="hire section" id="hire">
-
-            <div class="container">
-
-                <div class="hire-wrapper glass-card">
-
-                    <!-- Left Side -->
-
-                    <div class="hire-content">
-
-                        <span class="section-subtitle">
-                            Hire Me
-                        </span>
-
-                        <h2 class="section-title">
-                            Let's Build Something Amazing Together
-                        </h2>
-
-                        <p>
-
-                            Looking for a passionate frontend developer? I'm always
-                            excited to work on modern websites, creative ideas,
-                            freelance projects, and internship opportunities.
-
-                        </p>
-
-                        <div class="hire-features">
-
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Frontend Development</span>
-                            </div>
-
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Responsive Websites</span>
-                            </div>
-
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>UI / UX Design</span>
-                            </div>
-
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Quick Learner</span>
-                            </div>
-
-                        </div>
-
-                        <div class="response-time">
-
-                            <i class="fas fa-clock"></i>
-
-                            Usually replies within 24 hours.
-
-                        </div>
-
-                    </div>
-
-                    <!-- Right Side -->
-                    <form class="hire-form" id="contactForm" aria-label="Contact form">
-
-                        <!-- Web3Forms -->
-
-                        <input type="hidden" name="access_key" value="065e0bab-f769-4120-be5d-e1caa84da015">
-
-                        <input type="hidden" name="subject" value="New Portfolio Inquiry">
-
-                        <input type="hidden" name="from_name" value="Portfolio Website">
-
-                        <!-- Honeypot -->
-
-                        <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" aria-hidden="true">
-
-                        <!-- Name -->
-
-                        <div class="input-group" id="group-name">
-
-                            <label class="visually-hidden" for="contact-name">Your Name</label>
-
-                            <input type="text" id="contact-name" name="name" placeholder="Your Name"
-                                autocomplete="name" minlength="2" required>
-
-                            <span class="field-error" id="err-name" role="alert"></span>
-
-                        </div>
-
-                        <!-- Email -->
-
-                        <div class="input-group" id="group-email">
-
-                            <label class="visually-hidden" for="contact-email">Email Address</label>
-
-                            <input type="email" id="contact-email" name="email" placeholder="Email Address"
-                                autocomplete="email" required>
-
-                            <span class="field-error" id="err-email" role="alert"></span>
-
-                        </div>
-
-                        <!-- Project -->
-
-                        <div class="input-group" id="group-project">
-
-                            <label class="visually-hidden" for="contact-project">Project Type</label>
-
-                            <select id="contact-project" name="project" required>
-
-                                <option value="" disabled selected>Project Type</option>
-
-                                <option>Website Development</option>
-
-                                <option>Portfolio Website</option>
-
-                                <option>Landing Page</option>
-
-                                <option>Internship Opportunity</option>
-
-                                <option>Freelance Project</option>
-
-                                <option>UI / UX Design</option>
-
-                                <option>Other</option>
-
-                            </select>
-
-                            <span class="field-error" id="err-project" role="alert"></span>
-
-                        </div>
-
-                        <!-- Message -->
-
-                        <div class="input-group" id="group-message">
-
-                            <label class="visually-hidden" for="contact-message">Project details</label>
-
-                            <textarea id="contact-message" rows="6" name="message"
-                                placeholder="Tell me about your project..." minlength="20" required></textarea>
-
-                            <span class="field-error" id="err-message" role="alert"></span>
-
-                        </div>
-
-                        <!-- Button -->
-
-                        <button type="submit" class="btn btn-primary" id="submitBtn">
-
-                            <span class="btn-text">
-
-                                Send Message
-
-                            </span>
-
-                        </button>
-
-                    </form>
-
-                    <!-- ==========================================
-        SUCCESS POPUP
-========================================== -->
-
-                    <div id="successModal" class="success-modal" role="dialog" aria-modal="true"
-                        aria-labelledby="successModalTitle">
-
-                        <div class="success-box">
-
-                            <div class="success-icon" aria-hidden="true">
-
-                                <i class="fas fa-circle-check"></i>
-
-                            </div>
-
-                            <h2 id="successModalTitle">
-
-                                Message Sent Successfully!
-
-                            </h2>
-
-                            <p>
-
-                                Thank you for reaching out.
-
-                                <br><br>
-
-                                Your message has been received successfully.
-
-                                I'll review it carefully and get back to you
-                                within <strong>24 hours.</strong>
-
-                                <br><br>
-
-                                Have a wonderful day! 🚀
-
-                            </p>
-
-                            <button class="btn btn-primary" id="closeModal" aria-label="Close modal window">
-
-                                Awesome!
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Contact -->
-        <!-- ==========================================
-                CONTACT SECTION
+                CONTACT SECTION (Merged)
 ========================================== -->
 
         <section class="contact section" id="contact">
 
             <div class="container">
 
-                <div class="section-header">
+                <div class="contact-merged-wrapper">
 
-                    <span class="section-subtitle">
-                        Contact
-                    </span>
+                    <!-- ===== LEFT SIDE ===== -->
 
-                    <h2 class="section-title">
-                        Let's Connect
-                    </h2>
+                    <div class="contact-left">
 
-                    <p class="section-description">
-                        Whether you have a project, internship opportunity, or just want
-                        to connect, feel free to reach out.
-                    </p>
+                        <span class="section-subtitle">Get In Touch</span>
 
-                </div>
+                        <h2 class="contact-headline">
+                            Let's build something
+                            <span class="contact-headline-accent">extraordinary.</span>
+                        </h2>
 
-                <div class="contact-grid">
+                        <p class="contact-subtext">
+                            Have a project in mind, an idea to bring to life, or just
+                            want to connect? My inbox is always open.
+                        </p>
 
-                    <!-- Email -->
+                        <!-- Info Links -->
 
-                    <div class="contact-card glass-card">
+                        <div class="contact-info-list">
 
-                        <div class="contact-icon">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmishra.dev.27@gmail.com"
+                                target="_blank" rel="noopener noreferrer"
+                                class="contact-info-item" aria-label="Send email">
 
-                            <i class="fas fa-envelope"></i>
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">EMAIL</span>
+                                    <span class="contact-info-value">gauravmishra.dev.27@gmail.com</span>
+                                </div>
+
+                            </a>
+
+                            <a href="https://github.com/Gaurav18071"
+                                target="_blank" rel="noopener noreferrer"
+                                class="contact-info-item" aria-label="GitHub profile">
+
+                                <div class="contact-info-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">GITHUB</span>
+                                    <span class="contact-info-value">github.com/Gaurav18071</span>
+                                </div>
+
+                            </a>
+
+                            <a href="https://in.linkedin.com/in/gaurav18071"
+                                target="_blank" rel="noopener noreferrer"
+                                class="contact-info-item" aria-label="LinkedIn profile">
+
+                                <div class="contact-info-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">LINKEDIN</span>
+                                    <span class="contact-info-value">linkedin.com/in/gaurav18071</span>
+                                </div>
+
+                            </a>
+
+                            <a href="assets/Gaurav_Mishra_Resume.pdf"
+                                download="Gaurav_Mishra_Resume.pdf"
+                                target="_blank" rel="noopener noreferrer"
+                                class="contact-info-item" aria-label="Download Resume">
+
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">RESUME</span>
+                                    <span class="contact-info-value">Download PDF Resume</span>
+                                </div>
+
+                            </a>
 
                         </div>
-
-                        <h3>Email</h3>
-
-                        <p>gauravmishra.dev.27@gmail.com</p>
-
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmishra.dev.27@gmail.com"
-                            target="_blank" rel="noopener noreferrer" aria-label="Send email to Gaurav Mishra">
-                            Send Mail
-                        </a>
 
                     </div>
 
-                    <!-- Phone -->
+                    <!-- ===== RIGHT SIDE (Form) ===== -->
 
-                    <div class="contact-card glass-card">
+                    <div class="contact-right">
 
-                        <div class="contact-icon">
+                        <!-- Terminal-style header -->
 
-                            <i class="fas fa-phone"></i>
+                        <div class="contact-form-header">
 
-                        </div>
+                            <div class="contact-form-dots" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
 
-                        <h3>Phone</h3>
-
-                        <p>+91 9717067268</p>
-
-                        <a href="tel:+919717067268" aria-label="Call Gaurav Mishra at +91 9717067268">
-                            Call Now
-                        </a>
-
-                    </div>
-
-                    <!-- Location -->
-
-                    <div class="contact-card glass-card">
-
-                        <div class="contact-icon">
-
-                            <i class="fas fa-location-dot"></i>
+                            <span class="contact-form-label">GET IN TOUCH</span>
 
                         </div>
 
-                        <h3>Location</h3>
+                        <!-- Form -->
 
-                        <p>Delhi, India</p>
+                        <form class="hire-form" id="contactForm" aria-label="Contact form">
 
+                            <!-- Web3Forms -->
 
+                            <input type="hidden" name="access_key" value="065e0bab-f769-4120-be5d-e1caa84da015">
 
-                    </div>
+                            <input type="hidden" name="subject" value="New Portfolio Inquiry">
 
-                    <!-- LinkedIn -->
+                            <input type="hidden" name="from_name" value="Portfolio Website">
 
-                    <div class="contact-card glass-card">
+                            <!-- Honeypot -->
 
-                        <div class="contact-icon">
+                            <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" aria-hidden="true">
 
-                            <i class="fab fa-linkedin-in"></i>
+                            <!-- Name -->
 
-                        </div>
+                            <div class="input-group" id="group-name">
 
-                        <h3>LinkedIn</h3>
+                                <label for="contact-name">YOUR NAME</label>
 
-                        <p>Connect Professionally</p>
+                                <input type="text" id="contact-name" name="name"
+                                    placeholder="Enter your name"
+                                    autocomplete="name" minlength="2" required>
 
-                        <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer"
-                            aria-label="Visit Gaurav Mishra's LinkedIn profile">
-                            Visit Profile
-                        </a>
+                                <span class="field-error" id="err-name" role="alert"></span>
+
+                            </div>
+
+                            <!-- Email -->
+
+                            <div class="input-group" id="group-email">
+
+                                <label for="contact-email">YOUR EMAIL</label>
+
+                                <input type="email" id="contact-email" name="email"
+                                    placeholder="your@email.com"
+                                    autocomplete="email" required>
+
+                                <span class="field-error" id="err-email" role="alert"></span>
+
+                            </div>
+
+                            <!-- Subject -->
+
+                            <div class="input-group" id="group-project">
+
+                                <label for="contact-project">SUBJECT</label>
+
+                                <select id="contact-project" name="project" required>
+
+                                    <option value="" disabled selected>e.g. Custom Web App MVP</option>
+
+                                    <option>Website Development</option>
+
+                                    <option>Portfolio Website</option>
+
+                                    <option>Landing Page</option>
+
+                                    <option>Internship Opportunity</option>
+
+                                    <option>Freelance Project</option>
+
+                                    <option>UI / UX Design</option>
+
+                                    <option>Other</option>
+
+                                </select>
+
+                                <span class="field-error" id="err-project" role="alert"></span>
+
+                            </div>
+
+                            <!-- Message -->
+
+                            <div class="input-group" id="group-message">
+
+                                <label for="contact-message">MESSAGE</label>
+
+                                <textarea id="contact-message" rows="5" name="message"
+                                    placeholder="Tell me about your project timeline, requirements, or idea..."
+                                    minlength="20" required></textarea>
+
+                                <span class="field-error" id="err-message" role="alert"></span>
+
+                            </div>
+
+                            <!-- Submit Row -->
+
+                            <div class="contact-form-footer">
+
+                                <span class="contact-form-status" id="contact-status">Ready to send.</span>
+
+                                <button type="submit" class="btn btn-primary" id="submitBtn">
+
+                                    <span class="btn-text">SEND MESSAGE</span>
+
+                                </button>
+
+                            </div>
+
+                        </form>
 
                     </div>
 
@@ -1486,9 +1461,52 @@
 
             </div>
 
-        </section>
+            <!-- SUCCESS POPUP -->
 
-    </main>
+            <div id="successModal" class="success-modal" role="dialog" aria-modal="true"
+                aria-labelledby="successModalTitle">
+
+                <div class="success-box">
+
+                    <div class="success-icon" aria-hidden="true">
+
+                        <i class="fas fa-circle-check"></i>
+
+                    </div>
+
+                    <h2 id="successModalTitle">
+
+                        Message Sent Successfully!
+
+                    </h2>
+
+                    <p>
+
+                        Thank you for reaching out.
+
+                        <br><br>
+
+                        Your message has been received successfully.
+                        I'll review it carefully and get back to you
+                        within <strong>24 hours.</strong>
+
+                        <br><br>
+
+                        Have a wonderful day! 🚀
+
+                    </p>
+
+                    <button class="btn btn-primary" id="closeModal" aria-label="Close modal window">
+
+                        Awesome!
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
 
     <!-- ================= FOOTER ================= -->
     <!-- ==========================================
@@ -1499,80 +1517,35 @@
 
         <div class="container">
 
-            <div class="footer-content">
 
-                <!-- Left -->
 
-                <div class="footer-brand">
-
-                    <a href="#home" class="footer-logo">
-                        G<span>A</span>UR<span>A</span>V
-                    </a>
-
-                    <p>
-
-                        Computer Science Engineer &amp; Software Developer passionate
-                        about building modern, responsive, and user-friendly web
-                        applications.
-
-                    </p>
-
+            <!-- ==========================================
+                    VISITOR STATS & LIVE COUNTER
+            =========================================== -->
+            <div class="footer-stats-wrap">
+                <div class="footer-editorial-socials">
+                    <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <span class="bullet-sep">&middot;</span>
+                    <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <span class="bullet-sep">&middot;</span>
+                    <a href="https://instagram.com/gaurav18071" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
 
-                <!-- Quick Links -->
-
-                <div class="footer-links">
-
-                    <h3>Quick Links</h3>
-
-                    <ul>
-
-                        <li><a href="#home">Home</a></li>
-
-                        <li><a href="#about">About</a></li>
-
-                        <li><a href="#skills">Skills</a></li>
-
-                        <li><a href="#projects">Projects</a></li>
-
-                        <li><a href="#contact">Contact</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Social -->
-
-                <div class="footer-social">
-
-                    <h3>Connect</h3>
-
-                    <div class="social-icons">
-
-                        <a href="https://github.com/Gaurav18071" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub profile">
-
-                            <i class="fab fa-github" aria-hidden="true"></i>
-
-                        </a>
-
-                        <a href="https://in.linkedin.com/in/gaurav18071" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn profile">
-
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-
-                        </a>
-
-                        <a href="mailto:gauravmishra.dev.27@gmail.com" aria-label="Email Gaurav">
-
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-
-                        </a>
-
+                <div class="footer-stats-counter">
+                    <div class="footer-stat-item">
+                        <span class="footer-stat-number" id="statViewsCount">8,907</span>
+                        <span class="footer-stat-label">VIEWS</span>
                     </div>
-
+                    <div class="footer-stat-item">
+                        <span class="footer-stat-number" id="statVisitorsCount">3,042</span>
+                        <span class="footer-stat-label">VISITORS</span>
+                    </div>
+                    <div class="footer-stat-item">
+                        <span class="footer-live-dot" aria-hidden="true"></span>
+                        <span class="footer-stat-number" id="statOnlineCount">1</span>
+                        <span class="footer-stat-label">ONLINE</span>
+                    </div>
                 </div>
-
             </div>
 
             <div class="footer-bottom">
@@ -1597,10 +1570,15 @@
     </footer>
 
     <!-- ==========================================
-                    JAVASCRIPT (Minified & Deferred)
+                    JAVASCRIPT (Minified &amp; Deferred)
     =========================================== -->
 
     <script src="js/app.min.js" defer></script>
+    <script src="js/email.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/performance-section.js" defer></script>
+    <script src="js/visitor-counter.js" defer></script>
+
 
 
 </body>
