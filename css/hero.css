@@ -555,3 +555,123 @@
         height: 180px;
     }
 }
+
+
+/* ==========================================
+   ENHANCED TERMINAL CHATBOT STYLING
+========================================== */
+
+/* Smooth message animations */
+.term-msg-row {
+    animation: terminalMessageSlide 0.3s ease-out;
+}
+
+@keyframes terminalMessageSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Enhanced bot messages */
+.term-bot-text {
+    line-height: 1.6;
+    color: #d4d4d8;
+}
+
+/* Enhanced user messages */
+.term-user-text {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Input field focus enhancement */
+.term-cmd-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Submit button enhancement */
+.term-submit-btn {
+    transition: all 0.2s ease;
+}
+
+.term-submit-btn:hover {
+    background: rgba(0, 255, 136, 0.15);
+    color: #00ff88;
+    transform: translateX(2px);
+}
+
+/* Quick chips enhancement */
+.term-chip {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.term-chip:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00ff88;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+}
+
+.term-chip:active {
+    transform: translateY(0);
+}
+
+/* Terminal window glow effect */
+.terminal-window {
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 255, 136, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Live status pulse */
+.terminal-live-dot {
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
+}
+
+/* Scrollbar enhancement */
+.terminal-scroll-area::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 136, 0.3);
+    border-radius: 3px;
+}
+
+.terminal-scroll-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 136, 0.5);
+}
+
+/* Input prompt glow */
+.term-prompt-arrow {
+    color: #00ff88;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+/* Bot prefix enhancement */
+.term-bot-prefix {
+    color: #00ff88;
+    font-weight: 600;
+}
+
+/* User prompt enhancement */
+.term-prompt-green {
+    color: #00ff88;
+    font-weight: 700;
+    text-shadow: 0 0 6px rgba(0, 255, 136, 0.3);
+}

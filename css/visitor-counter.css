@@ -160,3 +160,26 @@
         font-size: 0.74rem;
     }
 }
+
+
+/* Loading state for counter */
+.footer-stat-number {
+    min-width: 60px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer-stat-number:empty::after,
+.footer-stat-number:contains('...')::after {
+    content: '';
+    animation: counterPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes counterPulse {
+    0%, 100% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+}

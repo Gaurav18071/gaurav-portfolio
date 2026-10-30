@@ -66,7 +66,9 @@
     // ── Number Count-up Animation ──
     function animateCount(elem, targetVal, duration) {
         if (!elem) return;
-        const startVal = Math.max(0, targetVal > 50 ? targetVal - 40 : 0);
+        
+        // Start from 0 instead of fake numbers
+        const startVal = 0;
         const startTime = performance.now();
 
         function step(now) {
@@ -95,6 +97,10 @@
 
         if (!viewsEl || !visitorsEl || !container) return;
 
+        // Set loading state immediately
+        viewsEl.textContent = '...';
+        visitorsEl.textContent = '...';
+
         let hasLoaded = false;
         const observer = new IntersectionObserver(async (entries) => {
             for (const entry of entries) {
@@ -103,8 +109,8 @@
                     observer.disconnect();
 
                     const stats = await fetchRealStats();
-                    animateCount(viewsEl, stats.views, 1200);
-                    animateCount(visitorsEl, stats.visitors, 1000);
+                    animateCount(viewsEl, stats.views, 800);
+                    animateCount(visitorsEl, stats.visitors, 800);
                     if (onlineEl) {
                         onlineEl.textContent = stats.online.toString();
                     }

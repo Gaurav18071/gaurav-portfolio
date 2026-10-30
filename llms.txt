@@ -9,6 +9,7 @@
 - [NeuroQuiz](https://neuroquiz-g.vercel.app/): Modern interactive quiz platform with HTML5, CSS3, JavaScript (ES6), Vite, GSAP, and LocalStorage. (GitHub: https://github.com/Gaurav18071/NeuroQuiz)
 - [HireTrack - ATS Platform](https://github.com/Gaurav18071/Hiretrack-ai): Recruitment Management Platform (ATS) built with Next.js, TypeScript, Prisma, PostgreSQL (Neon), Auth.js, bcrypt, and Zod.
 - [Flapboard Typing Platform](https://typing-master-pied.vercel.app/): Full-stack AI-powered adaptive typing practice platform built with Next.js, TypeScript, Spring Boot, PostgreSQL, and REST APIs. (GitHub: https://github.com/Gaurav18071/typingMaster)
+- [3D Space Developer Portfolio](https://github.com/Gaurav18071/Gaurav-portfolio-space): Immersive, interactive 3D space-themed developer portfolio built with Next.js, TypeScript, Three.js / WebGL, and Tailwind CSS, featuring 3D Free Roam exploration, interactive astronaut animations, and sci-fi HUD navigation.
 
 ## Experience
 
